@@ -40,6 +40,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.sidebar-brand-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .sidebar-logo {
     height: 44px;
     width: auto;

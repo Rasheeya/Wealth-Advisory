@@ -644,36 +644,14 @@ div[id^="tab-"] {
 }
 
 /* ==========================================================================
-   TOAST NOTIFICATION
+   TOAST NOTIFICATION (Disabled across all pages)
    ========================================================================== */
-.luxury-toast {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--color-primary-dark);
-    border: 1px solid var(--color-accent);
-    border-left: 4px solid var(--color-accent);
-    color: var(--color-secondary);
-    padding: 1rem 1.5rem;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 10000;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: var(--transition-smooth);
-}
-
+.luxury-toast,
 .luxury-toast.show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.luxury-toast i {
-    color: var(--color-accent);
-    font-size: 1.25rem;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Background floating particles container */
@@ -1093,8 +1071,9 @@ input[type="date"].form-input {
         padding: 0.28rem 0.65rem;
         font-size: 0.74rem;
     }
-    .toast {
-        max-width: calc(100% - 1.5rem);
+    .toast,
+    .luxury-toast {
+        display: none !important;
     }
 }
 

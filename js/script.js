@@ -39,19 +39,14 @@
         return formattedWords.length ? formattedWords.join(' ') : username.trim();
     }
 
-    // Toast Notification System
+    // Toast Notification System (Disabled - pop-ups removed across all pages)
     function showToast(message, icon = 'fa-check-circle', duration = 3500) {
-        let toast = document.querySelector('.luxury-toast');
-        if (!toast) {
-            toast = document.createElement('div');
-            toast.className = 'luxury-toast';
-            document.body.appendChild(toast);
+        // Pop-up disabled across all pages per user request
+        const existingToast = document.querySelector('.luxury-toast');
+        if (existingToast) {
+            existingToast.remove();
         }
-        toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, duration);
+        return;
     }
 
     // ==========================================================================
@@ -293,6 +288,14 @@
 
             // 5. Dashboard Specific Rules
             if (page === 'user-dashboard.html' || page === 'client-dashboard.html') {
+                // EXEMPTION: Logo click routes to login.html
+                if ((target.closest('.sidebar-brand-link') || target.closest('.topbar-mobile-logo') || target.classList.contains('sidebar-logo') || target.closest('.sidebar-brand')) && !target.closest('.sidebar-close-btn')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = 'login.html';
+                    return;
+                }
+
                 // EXEMPTION: Sidebar navigation and sidebar logout
                 if (target.closest('.dashboard-sidebar')) {
                     return;
