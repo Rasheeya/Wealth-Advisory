@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Insights & Market Intelligence | Stackly Wealth Advisory</title>
+    <meta name="description"
+        content="Expert financial research, macroeconomic perspectives, tax strategy guides, and wealth preservation intelligence.">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         COMMON NAVBAR
+         ========================================================================== -->
+    <header class="main-header">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="brand-logo-img">
+            </a>
+
+            <nav class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions d-mobile-only">
+                    <a href="login.html" class="nav-login-btn">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Log In</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-actions d-none-mobile">
+                <a href="login.html" class="nav-login-btn">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ==========================================================================
+             1. HERO SECTION
+             ========================================================================== -->
+        <section class="page-hero blog-hero">
+            <div class="container page-hero-content">
+                <span class="section-tag">Market Intelligence • Research Committee</span>
+                <h1 class="hero-title">Wealth <span class="text-gold">Insights</span> & Market Intel</h1>
+                <p class="lead text-muted">Institutional analysis, macroeconomic perspectives, and strategic tax
+                    planning guides published by our portfolio committee.</p>
+
+                <!-- Trending Topic Pills -->
+                <div class="hero-pill-group">
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-earth-americas"></i> Global Macro</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-chart-pie"></i> Asset Allocation</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-scale-balanced"></i> Tax Alpha</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-landmark"></i> Retirement</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-coins"></i> Alternative Credit</a>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="404.html" class="btn btn-primary">
+                        <span>Subscribe to Briefing</span>
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             2. MARKET INSIGHTS HORIZONTAL TICKER
+             ========================================================================== -->
+        <div class="market-ticker-wrap">
+            <div class="ticker-track">
+                <div class="ticker-item"><span class="ticker-name">S&P 500:</span> <span
+                        class="ticker-val">5,842.10</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.64%</span></div>
+                <div class="ticker-item"><span class="ticker-name">NASDAQ 100:</span> <span
+                        class="ticker-val">20,418.50</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.92%</span></div>
+                <div class="ticker-item"><span class="ticker-name">GOLD (OUNCE):</span> <span
+                        class="ticker-val">$2,685.40</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.38%</span></div>
+                <div class="ticker-item"><span class="ticker-name">10Y TREASURY:</span> <span
+                        class="ticker-val">3.88%</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-down"></i> -0.04%</span></div>
+                <div class="ticker-item"><span class="ticker-name">STACKLY GLOBAL INDEX:</span> <span
+                        class="ticker-val">142.80</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +1.15%</span></div>
+                <div class="ticker-item"><span class="ticker-name">EUR/USD:</span> <span
+                        class="ticker-val">1.1140</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.12%</span></div>
+                <!-- Duplicate for seamless infinite loop -->
+                <div class="ticker-item"><span class="ticker-name">S&P 500:</span> <span
+                        class="ticker-val">5,842.10</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.64%</span></div>
+                <div class="ticker-item"><span class="ticker-name">NASDAQ 100:</span> <span
+                        class="ticker-val">20,418.50</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.92%</span></div>
+                <div class="ticker-item"><span class="ticker-name">GOLD (OUNCE):</span> <span
+                        class="ticker-val">$2,685.40</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-up"></i> +0.38%</span></div>
+                <div class="ticker-item"><span class="ticker-name">10Y TREASURY:</span> <span
+                        class="ticker-val">3.88%</span> <span class="ticker-change up"><i
+                            class="fa-solid fa-arrow-down"></i> -0.04%</span></div>
+            </div>
+        </div>
+
+        <!-- ==========================================================================
+             3. FEATURED ARTICLE & LATEST ARTICLES
+             ========================================================================== -->
+        <section class="section-padding">
+            <div class="container">
+                <!-- Featured Article -->
+                <div class="featured-article-card">
+                    <div class="featured-img-wrap">
+                        <img src="assets/featured.webp" alt="Global Macro Wealth Strategy in 2026">
+                        <span class="blog-category-badge">Featured Analysis</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                            <span><i class="fa-solid fa-user-pen"></i> Marcus Vance, CIO</span>
+                        </div>
+                        <h2 class="blog-title"
+                            style="font-size: clamp(1.8rem, 2.5vw, 2.3rem); margin: 0.75rem 0 1rem 0;">Global Macro
+                            Wealth Strategy in 2026: Navigating Rate Cuts & Sovereign Allocations</h2>
+                        <p class="blog-excerpt">An in-depth fiduciary analysis on structural shifts in global fixed
+                            income, institutional private credit yields, and multi-currency diversification protocols
+                            for multi-family offices.</p>
+                        <a href="404.html" class="btn btn-primary" style="align-self: flex-start;">
+                            <span>Read Full Intelligence Report</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Section Header for 6 Articles -->
+                <div class="section-header text-left" style="margin-bottom: 2.5rem;">
+                    <span class="section-tag">All Perspectives</span>
+                    <h2 class="section-title">Latest Articles</h2>
+                </div>
+
+                <!-- 6 Articles Grid -->
+                <div class="blog-grid">
+                    <!-- Article 1: Investing -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/market.webp"
+                                alt="Navigating Interest Rate Shifts in High Net Worth Portfolios">
+                            <span class="blog-category-badge">Investing</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                            </div>
+                            <h3 class="blog-title">Navigating Interest Rate Shifts in HNW Portfolios</h3>
+                            <p class="blog-excerpt">How central bank easing cycles impact yield curves, private debt
+                                spreads, and equity sector rotations.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2: Retirement -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/retirement-guide.webp"
+                                alt="The Ultra-HNW Guide to Tax-Advantaged Retirement">
+                            <span class="blog-category-badge">Retirement</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 min</span>
+                            </div>
+                            <h3 class="blog-title">The Ultra-HNW Guide to Tax-Advantaged Retirement</h3>
+                            <p class="blog-excerpt">Structuring non-qualified deferred compensation and backdoor
+                                conversions to ensure multi-decade liquidity.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3: Tax Planning -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/tax-strategy.webp" alt="Structuring Cross-Border Wealth and Family Trusts">
+                            <span class="blog-category-badge">Tax Planning</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 7 min</span>
+                            </div>
+                            <h3 class="blog-title">Structuring Cross-Border Wealth & Family Trusts</h3>
+                            <p class="blog-excerpt">Mitigating double taxation and inheritance duties for international
+                                families holding multi-jurisdictional assets.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 4: Estate Planning -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/estate-planning.webp"
+                                alt="Preserving Generational Legacy Beyond Three Decades">
+                            <span class="blog-category-badge">Estate Planning</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                            </div>
+                            <h3 class="blog-title">Preserving Generational Legacy Beyond 30 Years</h3>
+                            <p class="blog-excerpt">Governance frameworks, family constitutions, and irrevocable dynasty
+                                trusts to defeat the wealth transfer curse.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 5: Wealth Management -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/crypto-allocation.webp"
+                                alt="Institutional Digital Asset Allocations in Modern Wealth">
+                            <span class="blog-category-badge">Wealth Management</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> June 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 min</span>
+                            </div>
+                            <h3 class="blog-title">Institutional Digital Asset Allocations in Modern Wealth</h3>
+                            <p class="blog-excerpt">Prudent risk modeling for tokenized real assets, sovereign ETF
+                                integration, and cold-storage custodial governance.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 6: Personal Finance -->
+                    <div class="blog-card">
+                        <div class="blog-img-wrap">
+                            <img src="assets/global-growth.webp"
+                                alt="Frontier Market Real Estate and Equity Diversification">
+                            <span class="blog-category-badge">Personal Finance</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 4 min</span>
+                            </div>
+                            <h3 class="blog-title">Frontier Real Estate & Private Equity Diversification</h3>
+                            <p class="blog-excerpt">Direct commercial real estate debt versus REITs: Evaluating
+                                liquidity risk and inflation protection.</p>
+                            <a href="404.html" class="blog-read-more">
+                                <span>Read Article</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
+                     4. NEWSLETTER SUBSCRIPTION (GLASS-STYLE CARD)
+                     ========================================================================== -->
+                <div class="newsletter-card">
+                    <span class="section-tag">Private Intelligence</span>
+                    <h2 class="section-title">Subscribe to the Executive Briefing</h2>
+                    <p>Receive our quarterly macro briefings, tax legislative updates, and institutional wealth research
+                        directly in your inbox.</p>
+
+                    <form id="newsletterForm" class="newsletter-form" novalidate>
+                        <div class="form-group" style="position: relative;">
+                            <input type="text" id="nlName" class="form-input" placeholder="Your Full Name" required
+                                autocomplete="name">
+                            <div class="form-error-msg" id="nlNameError"><i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Please enter your name (min. 3 letters).</span>
+                            </div>
+                        </div>
+                        <div class="form-group" style="position: relative;">
+                            <input type="email" id="nlEmail" class="form-input" placeholder="Your Business Email"
+                                required autocomplete="email">
+                            <div class="form-error-msg" id="nlEmailError"><i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Please enter a valid business email.</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-btn-wrap">
+                            <button type="submit" class="btn btn-primary" id="nlSubmitBtn">
+                                <span>Subscribe</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             5. FINAL CTA
+             ========================================================================== -->
+        <section class="final-cta-section">
+            <div class="container final-cta-content">
+                <span class="section-tag">Strategic Foresight</span>
+                <h2 class="final-cta-title">Stay Ahead of Your <span class="text-gold">Financial Future</span></h2>
+                <p class="final-cta-subtitle">Speak with our research desk or schedule a private consultation with a
+                    senior advisor.</p>
+                <div class="final-cta-buttons">
+                    <a href="404.html" class="btn btn-primary btn-lg">
+                        <span>Book a Consultation</span>
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         COMMON FOOTER
+         ========================================================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory">
+                    </a>
+                    <p class="footer-desc">
+                        Stackly Wealth Advisory provides premier fiduciary asset management, tax structuring, and
+                        retirement roadmaps for discerning families and institutions worldwide.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="404.html" class="social-link" title="LinkedIn"><img src="assets/linkedin.webp"
+                                alt="LinkedIn"></a>
+                        <a href="404.html" class="social-link" title="Twitter / X"><img src="assets/twitter.webp"
+                                alt="Twitter"></a>
+                        <a href="404.html" class="social-link" title="Facebook"><img src="assets/facebook.webp"
+                                alt="Facebook"></a>
+                        <a href="404.html" class="social-link" title="Instagram"><img src="assets/instagram.webp"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Home</a>
+                        </li>
+                        <li><a href="about.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> About
+                                Us</a></li>
+                        <li><a href="services.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Services</a></li>
+                        <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+                        </li>
+                        <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Investment Mgmt</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Retirement Planning</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Tax
+                                Optimization</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Estate
+                                Planning</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Risk
+                                Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info & Stackly Map -->
+                <div class="footer-col footer-col-contact">
+                    <h4 class="footer-col-title">Contact & Location</h4>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>MMR Complex, Chinna Thirupathi,<br>near Chinna Muniyappan Kovil,<br>Salem, Tamil Nadu
+                                636008</span>
+                        </div>
+                    </div>
+                    <!-- Stackly Map in Footer -->
+                    <div class="footer-map-box">
+                        <iframe src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=16&output=embed"
+                            title="Stackly Headquarters Google Map" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu"
+                            target="_blank" rel="noopener" class="footer-map-overlay-btn"
+                            title="Open Stackly in Google Maps">
+                            <span><i class="fa-solid fa-location-crosshairs text-gold"></i> Open Map</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Wealth Advisory LLC. All Rights Reserved. Member FINRA / SIPC.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="404.html" class="footer-bottom-link">Terms of Service</a>
+                    <a href="404.html" class="footer-bottom-link">Form ADV Part 2A</a>
+                    <a href="404.html" class="footer-bottom-link">Disclosures</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

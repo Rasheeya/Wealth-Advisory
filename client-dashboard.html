@@ -1,0 +1,1048 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Client Wealth Portal | Stackly Wealth Advisory</title>
+    <meta name="description"
+        content="Exclusive Private Client portal for comprehensive net worth tracking, goal progression, and dedicated advisor communication.">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- ==========================================================================
+             CLIENT SIDEBAR (9 ITEMS)
+             ========================================================================== -->
+        <aside class="dashboard-sidebar">
+            <div>
+                <div class="sidebar-brand">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="sidebar-logo">
+                    <button class="sidebar-close-btn" aria-label="Close Navigation">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#overview" class="sidebar-item active" data-tab="overview">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Overview</span>
+                    </a>
+                    <a href="#wealthplan" class="sidebar-item" data-tab="wealthplan">
+                        <i class="fa-solid fa-scroll"></i>
+                        <span>My Wealth Plan</span>
+                    </a>
+                    <a href="#investments" class="sidebar-item" data-tab="investments">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Investments</span>
+                    </a>
+                    <a href="#goals" class="sidebar-item" data-tab="goals">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <span>Goals</span>
+                    </a>
+                    <a href="#documents" class="sidebar-item" data-tab="documents">
+                        <i class="fa-solid fa-folder-closed"></i>
+                        <span>Documents</span>
+                    </a>
+                    <a href="#messages" class="sidebar-item" data-tab="messages">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a href="#profile" class="sidebar-item" data-tab="profile">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#support" class="sidebar-item" data-tab="support">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Support</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="login.html" class="sidebar-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ==========================================================================
+             MAIN CLIENT DASHBOARD CONTENT
+             ========================================================================== -->
+        <main class="dashboard-main">
+            <!-- Topbar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="dashboard-mobile-toggle" aria-label="Toggle Sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="topbar-greeting">
+                        <h2>Private Wealth Portal</h2>
+                        <p>Welcome, <strong>Helena Rothschild</strong> â€¢ Private Family Office Tier</p>
+                    </div>
+                </div>
+
+                <!-- Center Brand Logo for Mobile View -->
+                <a href="index.html" class="topbar-mobile-logo" aria-label="Stackly Home">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory">
+                </a>
+
+                <div class="topbar-actions">
+                    <button class="topbar-notify-btn" title="Advisor Messages">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notify-badge">2</span>
+                    </button>
+                    <div class="topbar-user-profile">
+                        <div class="topbar-user-icon">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="user-name-role">
+                            <span class="uname">Helena Rothschild</span>
+                            <span class="urole">h.rothschild@familyoffice.ch</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ======================================================================
+                 TAB 1: OVERVIEW
+                 ====================================================================== -->
+            <div class="dashboard-tab-content active" id="tab-overview">
+                <!-- Welcome Overview Section -->
+                <div class="dashboard-overview-banner tab-header-banner">
+                    <div class="overview-banner-content">
+                        <div class="overview-badge">
+                            <i class="fa-solid fa-crown"></i> Member Overview
+                        </div>
+                        <h1 class="overview-title">
+                            Welcome, <span class="user-display-name">Helena</span>!
+                        </h1>
+                        <p class="overview-subtitle">
+                            Private Family Office Tier &bull; Real-time consolidated family office oversight across global trusts, offshore vaults, and liquid reserves.
+                        </p>
+                    </div>
+                    <div class="overview-banner-action">
+                        <button class="btn btn-primary" data-action="download">
+                            <i class="fa-solid fa-file-pdf"></i> Quarterly Briefing
+                        </button>
+                        <a href="404.html" class="btn btn-outline">
+                            <i class="fa-solid fa-compass"></i> View Architecture
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4 Private Wealth Metric Cards -->
+                <section class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Total Net Worth</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-crown"></i></div>
+                        </div>
+                        <div class="metric-val">$4,920,000</div>
+                        <div class="metric-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+$380,000 (YTD)</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Managed Portfolio</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                        </div>
+                        <div class="metric-val">$3,850,000</div>
+                        <div class="metric-trend">
+                            <span>78.2% Total Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Monthly Growth</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-chart-simple"></i></div>
+                        </div>
+                        <div class="metric-val">+2.4%</div>
+                        <div class="metric-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>Alpha: +1.1% vs S&P</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Goal Completion</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
+                        </div>
+                        <div class="metric-val">78.0%</div>
+                        <div class="metric-trend" style="color: var(--color-accent);">
+                            <span>On Track for 2028 Target</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Goals Progress & Dedicated Advisor Grid -->
+                <section class="charts-split-grid">
+                    <div class="chart-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <h3>Financial Goal Progress</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Multi-Target Wealth
+                                    Roadmap Status</p>
+                            </div>
+                            <a href="404.html" class="status-badge active" style="text-decoration: none;">4 Goals Active</a>
+                        </div>
+
+                        <div class="goals-progress-list">
+                            <div class="goal-item">
+                                <div class="goal-info-row">
+                                    <span class="goal-title">1. Executive Retirement Fund ($5,000,000 Target)</span>
+                                    <span class="goal-percent">82% ($4.1M)</span>
+                                </div>
+                                <div class="goal-bar-bg">
+                                    <div class="goal-bar-fill" data-width="82%" style="width: 82%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <div class="goal-info-row">
+                                    <span class="goal-title">2. Swiss Alps Estate Acquisition ($2,000,000 Target)</span>
+                                    <span class="goal-percent">65% ($1.3M)</span>
+                                </div>
+                                <div class="goal-bar-bg">
+                                    <div class="goal-bar-fill" data-width="65%" style="width: 65%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <div class="goal-info-row">
+                                    <span class="goal-title">3. Family Education & Trust Endowment ($1,000,000)</span>
+                                    <span class="goal-percent">94% ($940K)</span>
+                                </div>
+                                <div class="goal-bar-bg">
+                                    <div class="goal-bar-fill" data-width="94%" style="width: 94%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <div class="goal-info-row">
+                                    <span class="goal-title">4. Emergency & Tax Liquidity Buffer ($500,000)</span>
+                                    <span class="goal-percent" style="color: var(--color-accent);">100%
+                                        (Completed)</span>
+                                </div>
+                                <div class="goal-bar-bg">
+                                    <div class="goal-bar-fill" data-width="100%" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dedicated Advisor Card -->
+                    <div class="chart-card"
+                        style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div class="chart-card-header">
+                            <h3>Your Dedicated Strategist</h3>
+                            <span class="status-badge active"><i class="fa-solid fa-lock text-gold"></i> Direct
+                                Encrypted</span>
+                        </div>
+
+                        <div style="text-align: center; padding: 1rem 0;">
+                            <img src="assets/advisor2.webp" alt="Eleanor Sterling" class="client-advisor-avatar"
+                                style="width: 100px; height: 100px; margin: 0 auto 1rem auto; display: block;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 0.25rem;">Eleanor Sterling</h4>
+                            <p
+                                style="color: var(--color-accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                                MANAGING DIRECTOR, PRIVATE WEALTH</p>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">"We have
+                                successfully completed your Q3 dynasty trust tax audit. All assets are insulated."</p>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <a href="404.html" class="btn btn-outline btn-sm" style="flex: 1;">
+                                    <i class="fa-solid fa-comment-dots"></i> Message
+                                </a>
+                                <button class="btn btn-primary btn-sm" style="flex: 1;" data-action="advisor">
+                                    <i class="fa-solid fa-calendar-check"></i> Book Session
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Private Activity Feed -->
+                <section class="data-table-card">
+                    <div class="chart-card-header">
+                        <h3>Recent Private Activity</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-magnifying-glass-chart"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Portfolio Reviewed</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Eleanor Sterling
+                                        conducted semi-annual estate liquidity assessment</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">2 hours ago</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-comment-dots"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Advisor Message</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">New private
+                                        equity tranche available for Swiss trust vehicle</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">Sep 01, 2026</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-arrows-rotate"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Investment Updated</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Quarterly
+                                        municipal bond coupon payment ($18,400) reinvested</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">Aug 25, 2026</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 2: MY WEALTH PLAN
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-wealthplan">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Consolidated Family Wealth Architecture</h2>
+                        <p>Total asset-liability reconciliation across liquid securities, prime real estate, and
+                            privately held business entities.</p>
+                    </div>
+                    <button class="btn btn-outline btn-sm" data-action="download">
+                        <i class="fa-solid fa-file-invoice"></i> Export Full Balance Sheet
+                    </button>
+                </div>
+
+                <!-- Consolidated Family Balance Sheet -->
+                <div class="balance-sheet-grid">
+                    <div class="balance-card">
+                        <div class="balance-card-type">Liquid Portfolio</div>
+                        <div class="balance-card-val">$3,850,000</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Segregated Custody (BNY
+                            Mellon & Swiss Vault)</p>
+                    </div>
+
+                    <div class="balance-card">
+                        <div class="balance-card-type">Prime Real Estate</div>
+                        <div class="balance-card-val">$1,800,000</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Manhattan Penthouse & Aspen
+                            Chalet</p>
+                    </div>
+
+                    <div class="balance-card">
+                        <div class="balance-card-type">Private Business Equity</div>
+                        <div class="balance-card-val">$2,200,000</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Series B Enterprise Valuation
+                        </p>
+                    </div>
+
+                    <div class="balance-card highlight">
+                        <div class="balance-card-type" style="color: var(--color-secondary);">Consolidated Net Worth
+                        </div>
+                        <div class="balance-card-val" style="color: var(--color-accent);">$6,880,000</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Total Assets ($7.85M) -
+                            Liabilities ($970K)</p>
+                    </div>
+                </div>
+
+                <!-- Multi-Generational Milestone Timeline -->
+                <div class="luxury-card" style="padding: 2.25rem; margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-timeline text-gold"></i> 20-Year
+                        Generational Succession Roadmap</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 2rem;">Fiduciary roadmap
+                        orchestrating planned corporate liquidity, irrevocable trust shielding, and dynasty succession.
+                    </p>
+
+                    <div
+                        style="display: flex; flex-direction: column; gap: 1.5rem; position: relative; padding-left: 2rem; border-left: 2px solid var(--border-gold);">
+                        <div style="position: relative;">
+                            <div
+                                style="position: absolute; left: -2.6rem; top: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--color-accent); border: 3px solid var(--color-primary-dark);">
+                            </div>
+                            <span class="text-gold"
+                                style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">2026 â€¢ Current
+                                Mandate</span>
+                            <h4 style="font-size: 1.15rem; margin: 0.25rem 0;">Dynasty Trust Restructuring &
+                                Cross-Border Insulation</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Executed irrevocable
+                                multi-jurisdiction trust transferring $2.5M in private equity into tax-exempt vehicles.
+                            </p>
+                        </div>
+
+                        <div style="position: relative;">
+                            <div
+                                style="position: absolute; left: -2.6rem; top: 0; width: 18px; height: 18px; border-radius: 50%; background: rgba(212, 175, 55, 0.4); border: 3px solid var(--color-primary-dark);">
+                            </div>
+                            <span class="text-gold"
+                                style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">2028 â€¢
+                                Projected Milestone</span>
+                            <h4 style="font-size: 1.15rem; margin: 0.25rem 0;">Enterprise Liquidity Event & Secondary
+                                Exit ($3.5M Target)</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Structured QSBS
+                                (Qualified Small Business Stock) rollover to shield up to $10M from capital gains tax.
+                            </p>
+                        </div>
+
+                        <div style="position: relative;">
+                            <div
+                                style="position: absolute; left: -2.6rem; top: 0; width: 18px; height: 18px; border-radius: 50%; background: rgba(212, 175, 55, 0.4); border: 3px solid var(--color-primary-dark);">
+                            </div>
+                            <span class="text-gold"
+                                style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">2032 â€¢ Legacy
+                                Vision</span>
+                            <h4 style="font-size: 1.15rem; margin: 0.25rem 0;">Rothschild Family Philanthropic
+                                Foundation Endowment</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Establishment of $2.0M
+                                donor-advised foundation with generational board governance for primary beneficiaries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 3: INVESTMENTS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-investments">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Private Wealth Bespoke Mandates</h2>
+                        <p>Detailed performance analytics across direct equity stakes, sovereign debt, and private
+                            equity syndicates.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-action="invest">
+                        <i class="fa-solid fa-coins"></i> Request Capital Deployment
+                    </button>
+                </div>
+
+                <!-- Active Bespoke Mandates Table -->
+                <div class="data-table-card">
+                    <div class="table-filter-bar">
+                        <div class="filter-tab-group">
+                            <button class="filter-tab-btn active">All Mandates (4)</button>
+                            <button class="filter-tab-btn">Tax-Exempt (1)</button>
+                            <button class="filter-tab-btn">Private Equity (1)</button>
+                            <button class="filter-tab-btn">Direct Debt (2)</button>
+                        </div>
+                        <div class="table-search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search mandates...">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Mandate Strategy</th>
+                                    <th>Jurisdiction & Custody</th>
+                                    <th>Managed Capital</th>
+                                    <th>12M Net Return</th>
+                                    <th>Tax Classification</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Global Direct Equities Basket</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Algorithmic Tax-Loss
+                                            Harvesting</div>
+                                    </td>
+                                    <td>United States â€¢ BNY Mellon</td>
+                                    <td><strong>$1,732,500</strong></td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+19.8%</td>
+                                    <td><span class="status-badge active">Tax-Optimized</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Statement</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Municipal & Sovereign Debt</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Guaranteed Fiduciary
+                                            Income</div>
+                                    </td>
+                                    <td>Switzerland â€¢ UBS Vault Zurich</td>
+                                    <td><strong>$962,500</strong></td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+7.4%</td>
+                                    <td><span class="status-badge active"
+                                            style="background: rgba(18, 84, 130, 0.4);">Tax-Free Flow</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Statement</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Private Credit & Direct Senior Lending</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Quarterly High-Yield
+                                            Distributions</div>
+                                    </td>
+                                    <td>Cayman Trust â€¢ Segregated Account</td>
+                                    <td><strong>$577,500</strong></td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+12.6%</td>
+                                    <td><span class="status-badge active">Pass-Through</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Statement</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Direct Private Equity Co-Investments</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Pre-IPO Hyperscaler
+                                            Tranche</div>
+                                    </td>
+                                    <td>United States â€¢ Delaware LLC</td>
+                                    <td><strong>$577,500</strong></td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+26.1%</td>
+                                    <td><span class="status-badge active">Capital Gains</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Statement</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 4: GOALS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-goals">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Financial Goals & Life Milestones</h2>
+                        <p>Strategic multi-target capital tracking with real-time actuarial probability scoring.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-action="advisor">
+                        <i class="fa-solid fa-plus"></i> Define New Wealth Target
+                    </button>
+                </div>
+
+                <!-- 4 Detailed Goal Cards -->
+                <div class="client-goals-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+                    <!-- Goal Card 1 -->
+                    <div class="luxury-card" style="padding: 1.75rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <div>
+                                <span class="text-gold"
+                                    style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Goal
+                                    Mandate 01</span>
+                                <h3 style="font-size: 1.25rem; margin: 0.25rem 0;">Executive Retirement Fund</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Target Date: 2030 â€¢
+                                    Annuity Payout: $250K / Year</p>
+                            </div>
+                            <span class="status-badge active">82% Funded</span>
+                        </div>
+                        <div class="goal-bar-bg" style="margin-bottom: 1rem;">
+                            <div class="goal-bar-fill" style="width: 82%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+                            <span>Accumulated: <strong>$4,100,000</strong></span>
+                            <span class="text-gold">Target: $5,000,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Goal Card 2 -->
+                    <div class="luxury-card" style="padding: 1.75rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <div>
+                                <span class="text-gold"
+                                    style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Goal
+                                    Mandate 02</span>
+                                <h3 style="font-size: 1.25rem; margin: 0.25rem 0;">Swiss Alps Estate Acquisition</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Target Date: 2027 â€¢
+                                    St. Moritz Chalet</p>
+                            </div>
+                            <span class="status-badge active">65% Funded</span>
+                        </div>
+                        <div class="goal-bar-bg" style="margin-bottom: 1rem;">
+                            <div class="goal-bar-fill" style="width: 65%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+                            <span>Accumulated: <strong>$1,300,000</strong></span>
+                            <span class="text-gold">Target: $2,000,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Goal Card 3 -->
+                    <div class="luxury-card" style="padding: 1.75rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <div>
+                                <span class="text-gold"
+                                    style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Goal
+                                    Mandate 03</span>
+                                <h3 style="font-size: 1.25rem; margin: 0.25rem 0;">Family Education Endowment</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Multi-Generational
+                                    Trust for 3 Grandchildren</p>
+                            </div>
+                            <span class="status-badge active">94% Funded</span>
+                        </div>
+                        <div class="goal-bar-bg" style="margin-bottom: 1rem;">
+                            <div class="goal-bar-fill" style="width: 94%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+                            <span>Accumulated: <strong>$940,000</strong></span>
+                            <span class="text-gold">Target: $1,000,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Goal Card 4 -->
+                    <div class="luxury-card" style="padding: 1.75rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <div>
+                                <span class="text-gold"
+                                    style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Goal
+                                    Mandate 04</span>
+                                <h3 style="font-size: 1.25rem; margin: 0.25rem 0;">Emergency & Tax Buffer</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Instant Liquidity in
+                                    Swiss Francs (CHF)</p>
+                            </div>
+                            <span class="status-badge active" style="color: var(--color-accent);">100% Achieved</span>
+                        </div>
+                        <div class="goal-bar-bg" style="margin-bottom: 1rem;">
+                            <div class="goal-bar-fill" style="width: 100%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+                            <span>Accumulated: <strong>$500,000</strong></span>
+                            <span class="text-gold">Target: $500,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 5: DOCUMENTS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-documents">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Encrypted Family Document Vault</h2>
+                        <p>256-bit AES encrypted legal repository storing executed trust deeds, offshore filings, and
+                            estate agreements.</p>
+                    </div>
+                    <button class="btn btn-outline btn-sm" data-action="download">
+                        <i class="fa-solid fa-box-archive"></i> Download Master Archive (ZIP)
+                    </button>
+                </div>
+
+                <!-- Document Repository List -->
+                <div class="doc-vault-list">
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-scroll"></i></div>
+                            <div>
+                                <div class="doc-title">Executed Irrevocable Dynasty Trust Filing (Delaware)</div>
+                                <div class="doc-meta">Legal Instrument â€¢ Executed Aug 14, 2026 â€¢ 4.2 MB â€¢ Dual Notarized
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div>
+                                <div class="doc-title">Q3 2026 Private Wealth Performance Review & Tax Summary</div>
+                                <div class="doc-meta">Certified Fiduciary Report â€¢ Aug 31, 2026 â€¢ 2.8 MB â€¢ Prepared by
+                                    Eleanor Sterling</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-building-columns"></i></div>
+                            <div>
+                                <div class="doc-title">Swiss Vault Segregated Custody Certificate (Zurich)</div>
+                                <div class="doc-meta">Banking Custody Document â€¢ Jul 19, 2026 â€¢ 890 KB â€¢ UBS AG
+                                    Switzerland</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <div class="doc-title">Form ADV Part 2A Comprehensive Fiduciary Agreement</div>
+                                <div class="doc-meta">Regulatory Disclosure â€¢ Jan 10, 2026 â€¢ 1.1 MB â€¢ SEC Compliant
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+
+                <!-- File Dropzone Simulation -->
+                <div class="file-dropzone" id="clientDocDropzone">
+                    <i class="fa-solid fa-cloud-arrow-up text-gold"
+                        style="font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i>
+                    <h4 style="margin-bottom: 0.25rem;">Upload Document to Secure Vault</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Drag & drop estate contracts,
+                        tax filings, or click to browse (Max 50MB per file).</p>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 6: MESSAGES
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-messages">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Encrypted Advisory Communications Desk</h2>
+                        <p>Direct end-to-end encrypted channel with Eleanor Sterling and the Stackly Investment
+                            Committee.</p>
+                    </div>
+                    <span class="status-badge active"><i class="fa-solid fa-lock text-gold"></i> 256-bit Encrypted
+                        Session</span>
+                </div>
+
+                <!-- Chat Desk Container -->
+                <div class="chat-desk-container">
+                    <div class="chat-desk-header">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <img src="assets/advisor2.webp" alt="Eleanor Sterling" class="user-avatar-sm">
+                            <div>
+                                <strong style="font-size: 0.95rem;">Eleanor Sterling, Managing Director</strong>
+                                <span style="font-size: 0.78rem; color: #4ade80; display: block;"><i
+                                        class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Active Now â€¢ Private
+                                    Wealth Desk</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="advisor"
+                            style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
+                            <i class="fa-solid fa-video"></i> Switch to Video Call
+                        </button>
+                    </div>
+
+                    <div class="chat-stream-box" id="chatStream">
+                        <!-- Message 1 (Incoming) -->
+                        <div class="chat-bubble-row incoming">
+                            <img src="assets/advisor2.webp" alt="Eleanor Sterling" class="user-avatar-sm">
+                            <div>
+                                <div class="chat-bubble-msg">
+                                    Good morning, Helena. We have finalized the tax-loss harvesting review across your
+                                    global direct equities bucket. We successfully captured $42,000 in realized tax
+                                    alpha ahead of the quarter end.
+                                </div>
+                                <span class="chat-time-stamp">Today at 9:15 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 (Outgoing) -->
+                        <div class="chat-bubble-row outgoing">
+                            <div>
+                                <div class="chat-bubble-msg">
+                                    Thank you, Eleanor. That is excellent news. How are the negotiations progressing for
+                                    the private credit co-investment tranche?
+                                </div>
+                                <span class="chat-time-stamp" style="text-align: right;">Today at 9:28 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Message 3 (Incoming) -->
+                        <div class="chat-bubble-row incoming">
+                            <img src="assets/advisor2.webp" alt="Eleanor Sterling" class="user-avatar-sm">
+                            <div>
+                                <div class="chat-bubble-msg">
+                                    The syndication has secured allocation rights. The minimum allocation is set at
+                                    $150,000 with an expected net yield of 12.6% paid quarterly. I have uploaded the
+                                    term sheet to your Documents Vault for signature.
+                                </div>
+                                <span class="chat-time-stamp">Today at 9:42 AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="chat-input-bar" id="clientChatForm">
+                        <input type="text" class="chat-text-input" id="chatMessageInput"
+                            placeholder="Type an encrypted message to Eleanor Sterling..." required>
+                        <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">
+                            <span>Send</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 7: PROFILE
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-profile">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Family Office Entity & Signer Registry</h2>
+                        <p>Accredited investor certification, primary beneficiaries registry, and dual-authorization
+                            signers.</p>
+                    </div>
+                    <span class="status-badge active" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                        <i class="fa-solid fa-crown text-gold"></i> Qualified Purchaser Status
+                    </span>
+                </div>
+
+                <div class="profile-form-grid">
+                    <!-- Family Office Entity Details -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-landmark text-gold"></i> Legal Entity
+                            Structure</h3>
+                        <form id="clientProfileForm" novalidate>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Primary
+                                    Fiduciary Entity</label>
+                                <input type="text" id="clientEntityName" value="Rothschild Heritage Global Family Trust"
+                                    class="form-input" required>
+                                <div class="form-error-msg" id="clientEntityNameError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Entity name must be at least 4
+                                        characters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Jurisdiction
+                                    of Domicile</label>
+                                <input type="text" id="clientDomicile"
+                                    value="Wilmington, Delaware / Zurich Custodial Desk" class="form-input" required>
+                                <div class="form-error-msg" id="clientDomicileError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Jurisdiction must be at least
+                                        3 characters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Principal
+                                    Family Fiduciary</label>
+                                <input type="text" id="clientFiduciaryName" value="Helena Rothschild" class="form-input"
+                                    required>
+                                <div class="form-error-msg" id="clientFiduciaryNameError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Fiduciary name must be at
+                                        least 3 letters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Corporate
+                                    Tax Identification</label>
+                                <input type="text" value="XX-XXXX920 (Delaware Statutory Trust)" class="form-input"
+                                    disabled style="opacity: 0.7;">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-floppy-disk"></i> Update Entity Records
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Beneficiaries & Authorized Signers -->
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div class="luxury-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-users text-gold"></i> Primary
+                                Beneficiary Registry</h3>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(5,26,41,0.6); border-radius: 6px;">
+                                    <div>
+                                        <strong>Alexander Rothschild</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Successor Trustee
+                                            (Primary)</div>
+                                    </div>
+                                    <span class="text-gold" style="font-weight: 700;">50% Allocation</span>
+                                </div>
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(5,26,41,0.6); border-radius: 6px;">
+                                    <div>
+                                        <strong>Victoria Rothschild Trust</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Irrevocable
+                                            Generation-Skipping Trust</div>
+                                    </div>
+                                    <span class="text-gold" style="font-weight: 700;">30% Allocation</span>
+                                </div>
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(5,26,41,0.6); border-radius: 6px;">
+                                    <div>
+                                        <strong>Rothschild Foundation for Education</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Endowment Charity
+                                            Vehicle</div>
+                                    </div>
+                                    <span class="text-gold" style="font-weight: 700;">20% Allocation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="luxury-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-signature text-gold"></i> Authorized
+                                Wire Signers</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Wire requests
+                                exceeding $100,000 require dual biometric authorization.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-top: 1px solid rgba(255,255,255,0.08);">
+                                <div>
+                                    <strong>Helena Rothschild (Primary Signer)</strong>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Unlimited Wire
+                                        Authorization</div>
+                                </div>
+                                <span class="status-badge active">Verified</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-top: 1px solid rgba(255,255,255,0.08);">
+                                <div>
+                                    <strong>Alexander Rothschild (Co-Signer)</strong>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Secondary Dual-Signature
+                                        Requirement</div>
+                                </div>
+                                <span class="status-badge active">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 8: SUPPORT
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-support">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>24/7 Private Wealth Concierge & Executive Support</h2>
+                        <p>Dedicated direct hotline for priority liquidity transfers, boardroom bookings, and emergency
+                            wire mandates.</p>
+                    </div>
+                    <span class="status-badge active"><i class="fa-solid fa-headset text-gold"></i> 24/7 Priority
+                        Concierge</span>
+                </div>
+
+                <!-- Emergency Contact Hotlines -->
+                <div class="balance-sheet-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 2rem;">
+                    <div class="balance-card">
+                        <div class="balance-card-type">Corporate Executive Desk</div>
+                        <div class="balance-card-val" style="font-size: 1.35rem;">+91 98765 43210</div>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Ext 101 â€¢ Eleanor Sterling Direct</p>
+                    </div>
+
+                    <div class="balance-card">
+                        <div class="balance-card-type">Zurich Private Desk</div>
+                        <div class="balance-card-val" style="font-size: 1.35rem;">+41 22 819 3900</div>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Swiss Franc Wire Escrow & Custody</p>
+                    </div>
+
+                    <div class="balance-card">
+                        <div class="balance-card-type">Singapore APAC Desk</div>
+                        <div class="balance-card-val" style="font-size: 1.35rem;">+65 6718 2900</div>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Asian Market Liquidity Execution</p>
+                    </div>
+                </div>
+
+                <div class="profile-form-grid">
+                    <!-- Schedule Executive Consultation -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-calendar-days text-gold"></i> Request Executive Boardroom Session</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Schedule in-person review at MMR Complex, Salem or secure encrypted teleconference.</p>
+
+                        <form id="clientConciergeForm" novalidate>
+                            <div class="form-group">
+                                <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Meeting Format</label>
+                                <select id="clientMeetingFormat" class="form-input" required>
+                                    <option>Salem Executive Boardroom (MMR Complex)</option>
+                                    <option>Zurich Private Suite (Bahnhofstrasse)</option>
+                                    <option>London Mayfair Office</option>
+                                    <option>Encrypted Video Teleconference</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Preferred
+                                    Date</label>
+                                <input type="date" id="clientMeetingDate" value="2026-09-15" class="form-input"
+                                    required>
+                                <div class="form-error-msg" id="clientMeetingDateError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Meeting date cannot be in the
+                                        past.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Agenda
+                                    / Mandate Topics</label>
+                                <textarea rows="3" id="clientMeetingAgenda"
+                                    placeholder="e.g. Discussing the upcoming secondary private equity liquidity distribution..."
+                                    class="form-input" required></textarea>
+                                <div class="form-error-msg" id="clientMeetingAgendaError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Please describe agenda topics
+                                        (min. 15 characters).</span></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span>Confirm Consultation Request</span>
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Fiduciary Escrow & Wire Security Guidelines -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-shield-halved text-gold"></i> Escrow &
+                            Outgoing Wire Guidelines</h3>
+                        <div
+                            style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                            <div
+                                style="padding: 1rem; background: rgba(5,26,41,0.6); border-radius: 6px; border-left: 3px solid var(--color-accent);">
+                                <strong
+                                    style="color: var(--color-secondary); display: block; margin-bottom: 0.25rem;">Same-Day
+                                    Fedwire Guarantee</strong>
+                                Outgoing instructions received before 2:00 PM EST from authorized signatories are
+                                verified via verbal biometric code and dispatched immediately.
+                            </div>
+                            <div
+                                style="padding: 1rem; background: rgba(5,26,41,0.6); border-radius: 6px; border-left: 3px solid var(--color-accent);">
+                                <strong
+                                    style="color: var(--color-secondary); display: block; margin-bottom: 0.25rem;">Multi-Currency
+                                    FX Wire Capability</strong>
+                                We support instantaneous conversion and transfer across USD, CHF, EUR, GBP, and SGD with
+                                wholesale institutional interbank spreads.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

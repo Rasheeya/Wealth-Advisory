@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Consultation | Stackly Wealth Advisory</title>
+    <meta name="description"
+        content="Let's Start a Conversation. Speak with our wealth advisory team to protect and grow your assets.">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+         COMMON NAVBAR
+         ========================================================================== -->
+    <header class="main-header">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="brand-logo-img">
+            </a>
+
+            <nav class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions d-mobile-only">
+                    <a href="login.html" class="nav-login-btn">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Log In</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-actions d-none-mobile">
+                <a href="login.html" class="nav-login-btn">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ==========================================================================
+             1. HERO SECTION
+             ========================================================================== -->
+        <section class="page-hero contact-hero">
+            <div class="container page-hero-content">
+                <span class="section-tag">Private Advisory Desk • Global Capitals</span>
+                <h1 class="hero-title">Let's Start a <span class="text-gold">Conversation</span></h1>
+                <p class="lead text-muted">Speak directly with our senior wealth advisory team to architect a
+                    personalized fiduciary roadmap for your family, business, and generational assets.</p>
+
+                <!-- 4 Contact Trust Pills -->
+                <div class="hero-pill-group">
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-bolt text-gold"></i> &lt;24h Response Time</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-lock text-gold"></i> 100% Confidential NDA</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-user-tie text-gold"></i> Senior Strategist Access</a>
+                    <a href="404.html" class="hero-pill"><i class="fa-solid fa-globe text-gold"></i> NY • LDN • SGP • ZRH</a>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="404.html" class="btn btn-primary">
+                        <span>Book a Consultation</span>
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             2. CONTACT INFO CARDS (4 CARDS)
+             ========================================================================== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="contact-cards-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3>Phone Advisory</h3>
+                        <p><a href="404.html" style="color: inherit;">+91 98765 43210</a></p>
+                        <p>9876543210 (Direct Support)</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3>Direct Email</h3>
+                        <p><a href="404.html" style="color: inherit;">info@stackly.com</a></p>
+                        <p>support@stackly.com</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3>Corporate Headquarters</h3>
+                        <p>MMR Complex, Chinna Thirupathi</p>
+                        <p>near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Advisory Hours</h3>
+                        <p>Mon – Sat: 9:00 AM – 7:00 PM IST</p>
+                        <p>Private Wealth: 24/7 Dedicated Desk</p>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
+                     3. CONTACT FORM SECTION
+                     ========================================================================== -->
+                <div class="contact-form-layout">
+                    <div class="contact-form-card">
+                        <div class="section-header text-left" style="margin-bottom: 2rem;">
+                            <span class="section-tag">Direct Inquiry</span>
+                            <h2 class="section-title">Schedule a Consultation</h2>
+                            <p>Fill out the confidential form below and a Senior Wealth Strategist will connect within
+                                24 hours.</p>
+                        </div>
+
+                        <form id="contactForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label class="form-label" for="contactName">Full Name *</label>
+                                    <input type="text" id="contactName" class="form-control"
+                                        placeholder="e.g. Eleanor Vance" required>
+                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>Please provide your full name (at least 3 letters).</span>
+                                    </div>
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label" for="contactEmail">Email Address *</label>
+                                    <input type="email" id="contactEmail" class="form-control"
+                                        placeholder="e.g. eleanor@company.com" required>
+                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>Please provide a valid email address.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group-full">
+                                    <label class="form-label" for="contactPhone">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" class="form-control"
+                                        placeholder="+1 (555) 000-0000" required>
+                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>Please provide a valid phone number (min. 10 digits).</span>
+                                    </div>
+                                </div>
+                                <div class="form-group-full">
+                                    <label class="form-label" for="contactSubject">Subject of Inquiry *</label>
+                                    <input type="text" id="contactSubject" class="form-control"
+                                        placeholder="e.g. Portfolio Allocation & Tax Strategy" required>
+                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>Please specify the subject of your inquiry (min. 4 letters).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group-full">
+                                <label class="form-label" for="contactMessage">Confidential Message *</label>
+                                <textarea id="contactMessage" class="form-control"
+                                    placeholder="Tell us about your portfolio size, time horizon, or specific advisory needs..."
+                                    required></textarea>
+                                <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i> <span>Please
+                                        describe your advisory requirements (at least 20 characters).</span></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg" id="contactSubmitBtn"
+                                style="width: 100%;">
+                                <span>Transmit Confidential Inquiry</span>
+                                <i class="fa-solid fa-lock"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Sidebar Perks & Interactive Map Section (Fills Empty Area) -->
+                    <div class="contact-sidebar-col">
+                        <!-- Form Sidebar Perks -->
+                        <div class="contact-sidebar">
+                            <h3>Our Fiduciary Guarantee</h3>
+                            <p>We operate exclusively under the highest fiduciary standard in wealth management.</p>
+
+                            <div class="sidebar-perks">
+                                <div class="perk-item">
+                                    <div class="perk-icon">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                    </div>
+                                    <div class="perk-text">
+                                        <h4>Strict Confidentiality</h4>
+                                        <p>Your financial profile and balance sheet are protected by institutional-grade
+                                            encryption and NDAs.</p>
+                                    </div>
+                                </div>
+
+                                <div class="perk-item">
+                                    <div class="perk-icon">
+                                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                                    </div>
+                                    <div class="perk-text">
+                                        <h4>Zero Hidden Fees</h4>
+                                        <p>Direct fiduciary compensation with no third-party product commissions or
+                                            broker kickbacks.</p>
+                                    </div>
+                                </div>
+
+                                <div class="perk-item">
+                                    <div class="perk-icon">
+                                        <i class="fa-solid fa-comments"></i>
+                                    </div>
+                                    <div class="perk-text">
+                                        <h4>24-Hour Response</h4>
+                                        <p>Direct communication with a licensed Senior Wealth Strategist (CFA/CFP).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Office Map Section -->
+                        <div class="contact-map-card" id="contactMapCard">
+                            <!-- Embedded Interactive Map Frame -->
+                            <div class="contact-map-frame-wrap">
+                                <iframe id="contactMapIframe"
+                                    src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=17&output=embed"
+                                    title="Stackly Corporate Headquarters Location Map" loading="lazy" allowfullscreen
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                                <div class="map-status-pill">
+                                    <i class="fa-solid fa-circle" style="font-size: 0.5rem; color: #4ade80;"></i>
+                                    <span id="mapDeskStatus">Global Corporate Hub • Mon-Sat 9am-7pm IST</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
+                     4. OFFICE LOCATIONS (4 CARDS)
+                     ========================================================================== -->
+                <div class="section-header">
+                    <span class="section-tag">Global Presence</span>
+                    <h2 class="section-title">International Offices</h2>
+                    <p>Advising clients across major global financial capitals.</p>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-city">Salem</div>
+                        <p><strong>Global Headquarters</strong></p>
+                        <p>MMR Complex, Chinna Thirupathi</p>
+                        <p>Salem, Tamil Nadu 636008</p>
+                        <p><i class="fa-solid fa-phone text-gold"></i> +91 98765 43210</p>
+                        <button type="button" class="btn btn-outline btn-sm view-on-map-btn" data-hub="salem"
+                            style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-map-location-dot"></i> View on Map
+                        </button>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-city">London</div>
+                        <p><strong>European Advisory Desk</strong></p>
+                        <p>1 Curzon Street, Mayfair</p>
+                        <p>London W1J 5HD, UK</p>
+                        <p><i class="fa-solid fa-phone text-gold"></i> +44 (20) 7946 0991</p>
+                        <button type="button" class="btn btn-outline btn-sm view-on-map-btn" data-hub="london"
+                            style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-map-location-dot"></i> View on Map
+                        </button>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-city">Singapore</div>
+                        <p><strong>Asia-Pacific Hub</strong></p>
+                        <p>Marina Bay Financial Centre, T2</p>
+                        <p>Singapore 018983</p>
+                        <p><i class="fa-solid fa-phone text-gold"></i> +65 6789 2100</p>
+                        <button type="button" class="btn btn-outline btn-sm view-on-map-btn" data-hub="singapore"
+                            style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-map-location-dot"></i> View on Map
+                        </button>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-city">Zurich</div>
+                        <p><strong>Swiss Private Banking Hub</strong></p>
+                        <p>Bahnhofstrasse 45</p>
+                        <p>8001 Zurich, Switzerland</p>
+                        <p><i class="fa-solid fa-phone text-gold"></i> +41 (44) 220 8400</p>
+                        <button type="button" class="btn btn-outline btn-sm view-on-map-btn" data-hub="zurich"
+                            style="margin-top: 1rem; width: 100%;">
+                            <i class="fa-solid fa-map-location-dot"></i> View on Map
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ==========================================================================
+                     5. FAQ ACCORDION
+                     ========================================================================== -->
+                <div class="section-header">
+                    <span class="section-tag">Client Inquiries</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p>Clear answers to common questions about our wealth advisory services.</p>
+                </div>
+
+                <div class="faq-wrap">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is the minimum asset size to work with Stackly?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our Core Wealth strategies generally require a minimum of $500,000 in investable liquid
+                                assets. Our bespoke Private Wealth and multi-family office services are tailored for
+                                families and institutions with $5,000,000 to $100,000,000+ in managed assets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are you a fee-only fiduciary advisor?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, 100%. We operate strictly as fee-only fiduciary advisors. We never accept broker
+                                commissions, sales kickbacks, or proprietary fund incentives. Our compensation is
+                                entirely aligned with growing and protecting your assets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Where are my funds and assets held?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Client assets are held directly in your name at top-tier, institutional third-party
+                                custodians (such as Charles Schwab Institutional, Fidelity Institutional, or BNY Mellon
+                                Pershing). Stackly acts solely as your discretionary investment manager with limited
+                                trading authorization.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How often do we review our portfolio strategy?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>While our algorithms monitor risk and tax harvesting opportunities continuously, clients
+                                receive detailed monthly digital reports, comprehensive quarterly formal reviews, and
+                                unlimited on-demand consultations with their dedicated Senior Wealth Strategist.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can you coordinate with my existing CPAs and estate attorneys?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. We frequently collaborate with our clients' existing trusted legal counsel,
+                                family CPAs, and business valuation partners to ensure comprehensive tax harmonization
+                                and estate synchronization across all jurisdictions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             6. FINAL CTA
+             ========================================================================== -->
+        <section class="final-cta-section">
+            <div class="container final-cta-content">
+                <span class="section-tag">Direct Advisory</span>
+                <h2 class="final-cta-title">Need Expert <span class="text-gold">Financial Guidance</span>?</h2>
+                <p class="final-cta-subtitle">Our senior partners are ready to evaluate your portfolio with
+                    institutional rigor and fiduciary care.</p>
+                <div class="final-cta-buttons">
+                    <a href="404.html" class="btn btn-primary btn-lg">
+                        <span>Initiate Private Inquiry</span>
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         COMMON FOOTER
+         ========================================================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory">
+                    </a>
+                    <p class="footer-desc">
+                        Stackly Wealth Advisory provides premier fiduciary asset management, tax structuring, and
+                        retirement roadmaps for discerning families and institutions worldwide.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="404.html" class="social-link" title="LinkedIn"><img src="assets/linkedin.webp"
+                                alt="LinkedIn"></a>
+                        <a href="404.html" class="social-link" title="Twitter / X"><img src="assets/twitter.webp"
+                                alt="Twitter"></a>
+                        <a href="404.html" class="social-link" title="Facebook"><img src="assets/facebook.webp"
+                                alt="Facebook"></a>
+                        <a href="404.html" class="social-link" title="Instagram"><img src="assets/instagram.webp"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Home</a>
+                        </li>
+                        <li><a href="about.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> About
+                                Us</a></li>
+                        <li><a href="services.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Services</a></li>
+                        <li><a href="blog.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Blog</a>
+                        </li>
+                        <li><a href="contact.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Investment Mgmt</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i>
+                                Retirement Planning</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Tax
+                                Optimization</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Estate
+                                Planning</a></li>
+                        <li><a href="404.html" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Risk
+                                Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info & Stackly Map -->
+                <div class="footer-col footer-col-contact">
+                    <h4 class="footer-col-title">Contact & Location</h4>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>MMR Complex, Chinna Thirupathi,<br>near Chinna Muniyappan Kovil,<br>Salem, Tamil Nadu
+                                636008</span>
+                        </div>
+                    </div>
+                    <!-- Stackly Map in Footer -->
+                    <div class="footer-map-box">
+                        <iframe src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=16&output=embed"
+                            title="Stackly Headquarters Google Map" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r?entry=ttu"
+                            target="_blank" rel="noopener" class="footer-map-overlay-btn"
+                            title="Open Stackly in Google Maps">
+                            <span><i class="fa-solid fa-location-crosshairs text-gold"></i> Open Map</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Wealth Advisory LLC. All Rights Reserved. Member FINRA / SIPC.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="404.html" class="footer-bottom-link">Terms of Service</a>
+                    <a href="404.html" class="footer-bottom-link">Form ADV Part 2A</a>
+                    <a href="404.html" class="footer-bottom-link">Disclosures</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

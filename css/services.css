@@ -1,0 +1,340 @@
+/* ==========================================================================
+   STACKLY WEALTH ADVISORY - SERVICES PAGE STYLES (SERVICES.HTML)
+   Colors: #0B3C5D, #FFFFFF, #D4AF37
+   ========================================================================== */
+
+/* Service Deep-Dive Rows */
+.service-block {
+    padding: 5rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.service-block:last-of-type {
+    border-bottom: none;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.service-row.reverse {
+    direction: rtl;
+}
+
+.service-row.reverse > * {
+    direction: ltr;
+}
+
+.service-media {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-media:hover img {
+    transform: scale(1.05);
+}
+
+.service-content-box {
+    max-width: 540px;
+}
+
+.service-tag {
+    font-size: 0.82rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.service-title {
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    margin-bottom: 1.25rem;
+}
+
+.service-lead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.service-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.service-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.service-feature-list li i {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+}
+
+/* Service Comparison Tiers */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+    margin-top: 3rem;
+}
+
+.tier-card {
+    background: rgba(11, 60, 93, 0.35);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.tier-card.featured {
+    background: rgba(11, 60, 93, 0.75);
+    border: 2px solid var(--color-accent);
+    transform: scale(1.04);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+.tier-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.35rem 1.25rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    animation: badgeGlow 2.5s infinite alternate;
+}
+
+@keyframes badgeGlow {
+    0% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
+    100% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.8); }
+}
+
+.tier-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.tier-name {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.tier-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.tier-aum {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 1rem 0 0.25rem 0;
+}
+
+.tier-aum-sub {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.tier-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+}
+
+.tier-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.tier-feature-item i {
+    color: var(--color-accent);
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.tier-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-gold);
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (SERVICES) (320px - 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .service-row,
+    .service-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        direction: ltr;
+    }
+
+    .service-content-box {
+        max-width: 100%;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 440px;
+        margin: 3rem auto 0 auto;
+    }
+
+    .tier-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tier-card.featured {
+        transform: none;
+        padding-top: 3.25rem;
+    }
+
+    .tier-card.featured .tier-name {
+        margin-top: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-img-box {
+        height: 300px;
+    }
+    .service-detail-section {
+        padding: 4rem 0;
+    }
+    .service-block {
+        padding: 3.5rem 0;
+    }
+    .service-row {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-block {
+        padding: 3rem 0;
+    }
+    .service-row {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-img-box {
+        height: 240px;
+    }
+    .service-block {
+        padding: 2.5rem 0;
+    }
+    .service-row {
+        gap: 1.75rem;
+    }
+    .tier-card {
+        padding: 2rem 1.25rem;
+    }
+    .tier-card.featured {
+        padding-top: 3.25rem !important;
+    }
+    .tier-card.featured .tier-name {
+        margin-top: 0.85rem !important;
+    }
+    .tier-name {
+        font-size: 1.45rem;
+    }
+    .tier-aum,
+    .tier-price {
+        font-size: 1.75rem;
+    }
+    .service-content-box h2,
+    .service-title {
+        font-size: 1.55rem;
+    }
+    .service-feature-item,
+    .service-feature-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .tier-card {
+        padding: 1.75rem 1rem;
+    }
+    .tier-card.featured {
+        padding-top: 3.25rem !important;
+    }
+    .tier-aum,
+    .tier-price {
+        font-size: 1.55rem;
+    }
+    .tier-name {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .service-img-box {
+        height: 190px;
+    }
+    .service-block {
+        padding: 2rem 0;
+    }
+    .tier-card {
+        padding: 1.35rem 0.8rem;
+    }
+    .tier-card.featured {
+        padding-top: 3.25rem !important;
+    }
+    .tier-aum,
+    .tier-price {
+        font-size: 1.4rem;
+    }
+    .tier-name {
+        font-size: 1.25rem;
+    }
+    .service-title {
+        font-size: 1.35rem;
+    }
+}

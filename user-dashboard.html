@@ -1,0 +1,1162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Wealth Dashboard | Stackly Wealth Advisory</title>
+    <meta name="description" content="Manage your investment portfolio, review returns, and track asset allocations.">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- ==========================================================================
+             DASHBOARD SIDEBAR (8 ITEMS)
+             ========================================================================== -->
+        <aside class="dashboard-sidebar">
+            <div>
+                <div class="sidebar-brand">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="sidebar-logo">
+                    <button class="sidebar-close-btn" aria-label="Close Navigation">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#dashboard" class="sidebar-item active" data-tab="dashboard">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#portfolio" class="sidebar-item" data-tab="portfolio">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span>My Portfolio</span>
+                    </a>
+                    <a href="#investments" class="sidebar-item" data-tab="investments">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <span>Investments</span>
+                    </a>
+                    <a href="#transactions" class="sidebar-item" data-tab="transactions">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Transactions</span>
+                    </a>
+                    <a href="#reports" class="sidebar-item" data-tab="reports">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reports</span>
+                    </a>
+                    <a href="#profile" class="sidebar-item" data-tab="profile">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#support" class="sidebar-item" data-tab="support">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Support</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="login.html" class="sidebar-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ==========================================================================
+             MAIN DASHBOARD CONTENT
+             ========================================================================== -->
+        <main class="dashboard-main">
+            <!-- Topbar -->
+            <header class="dashboard-topbar">
+                <div class="topbar-left">
+                    <button class="dashboard-mobile-toggle" aria-label="Toggle Sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="topbar-greeting">
+                        <h2>Portfolio Overview</h2>
+                        <p>Welcome back, <strong>Arthur Pendelton</strong> â€¢ Active Fiduciary Tier</p>
+                    </div>
+                </div>
+
+                <!-- Center Brand Logo for Mobile View -->
+                <a href="index.html" class="topbar-mobile-logo" aria-label="Stackly Home">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory">
+                </a>
+
+                <div class="topbar-actions">
+                    <button class="topbar-notify-btn" title="Notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notify-badge">2</span>
+                    </button>
+                    <div class="topbar-user-profile">
+                        <div class="topbar-user-icon">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="user-name-role">
+                            <span class="uname">Arthur Pendelton</span>
+                            <span class="urole">a.pendelton@advisory-vault.com</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ======================================================================
+                 TAB 1: DASHBOARD (OVERVIEW)
+                 ====================================================================== -->
+            <div class="dashboard-tab-content active" id="tab-dashboard">
+                <!-- Welcome Overview Section -->
+                <div class="dashboard-overview-banner tab-header-banner">
+                    <div class="overview-banner-content">
+                        <div class="overview-badge">
+                            <i class="fa-solid fa-award"></i> Member Overview
+                        </div>
+                        <h1 class="overview-title">
+                            Welcome Back, <span class="user-display-name">Arthur</span>!
+                        </h1>
+                        <p class="overview-subtitle">
+                            Active Fiduciary Tier &bull; Real-time consolidated wealth analytics across all active advisory mandates.
+                        </p>
+                    </div>
+                    <div class="overview-banner-action">
+                        <button class="btn btn-primary" data-action="download">
+                            <i class="fa-solid fa-download"></i> Monthly Pack
+                        </button>
+                        <a href="404.html" class="btn btn-outline">
+                            <i class="fa-solid fa-sliders"></i> View Holdings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4 Dashboard Metric Cards -->
+                <section class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Total Portfolio</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-vault"></i></div>
+                        </div>
+                        <div class="metric-val">$1,842,500</div>
+                        <div class="metric-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+14.2% YoY</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Total Invested</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                        </div>
+                        <div class="metric-val">$1,250,000</div>
+                        <div class="metric-trend" style="color: var(--text-muted);">
+                            <span>Cost Basis</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Current Returns</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+                        </div>
+                        <div class="metric-val">+$592,500</div>
+                        <div class="metric-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+47.4% Net Gain</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-label">Available Liquidity</span>
+                            <div class="metric-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                        </div>
+                        <div class="metric-val">$118,200</div>
+                        <div class="metric-trend" style="color: var(--color-accent);">
+                            <span>6.4% Cash Buffer</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Financial Charts Section -->
+                <section class="charts-split-grid">
+                    <div class="chart-card">
+                        <div class="chart-card-header">
+                            <div>
+                                <h3>12-Month Portfolio Growth</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Net Asset Value
+                                    Performance ($ Millions)</p>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="chart-filter-btn active">1Y</button>
+                                <button class="chart-filter-btn">3Y</button>
+                                <button class="chart-filter-btn">ALL</button>
+                            </div>
+                        </div>
+                        <div id="performanceLineChart" class="chart-svg-container"></div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-card-header">
+                            <h3>Asset Allocation</h3>
+                        </div>
+                        <div id="allocationDoughnutChart"
+                            style="height: 180px; display: flex; justify-content: center;"></div>
+                        <div class="doughnut-legend">
+                            <div class="legend-item">
+                                <span><span class="legend-color" style="background: #D4AF37;"></span> Global
+                                    Equities</span>
+                                <strong>45%</strong>
+                            </div>
+                            <div class="legend-item">
+                                <span><span class="legend-color" style="background: #125482;"></span> Fixed Income &
+                                    Bonds</span>
+                                <strong>25%</strong>
+                            </div>
+                            <div class="legend-item">
+                                <span><span class="legend-color" style="background: #E5C768;"></span> Real Estate
+                                    Debt</span>
+                                <strong>15%</strong>
+                            </div>
+                            <div class="legend-item">
+                                <span><span class="legend-color" style="background: #062235;"></span> Private Credit &
+                                    Cash</span>
+                                <strong>15%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Actions Toolbar -->
+                <section style="margin-bottom: 2.5rem;">
+                    <div class="luxury-card"
+                        style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding: 1.5rem 2rem;">
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Fiduciary Quick Actions</h4>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Execute allocations or
+                                request documentation instantly.</p>
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="404.html" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-plus"></i> Add Investment
+                            </a>
+                            <a href="404.html" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-download"></i> Download Report
+                            </a>
+                            <a href="404.html" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-headset"></i> Contact Advisor
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activities -->
+                <section class="data-table-card">
+                    <div class="chart-card-header">
+                        <h3>Recent Portfolio Activities</h3>
+                        <a href="404.html"
+                            style="font-size: 0.85rem; color: var(--color-accent); text-decoration: none;">View All Transactions <i
+                                class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-plus"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Investment Added</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Allocated
+                                        $150,000 to Institutional Private Debt Vault</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">Yesterday</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-arrows-rotate"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Portfolio Rebalanced</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Quarterly
+                                        tax-loss harvesting and algorithmic rebalancing executed</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">Aug 28, 2026</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: rgba(11, 60, 93, 0.25); border-radius: 6px;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div class="metric-icon-wrap" style="width: 32px; height: 32px;"><i
+                                        class="fa-solid fa-money-bill-wave"></i></div>
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Dividend Reinvestment</strong>
+                                    <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">+$8,200
+                                        quarterly yield automatically reinvested</p>
+                                </div>
+                            </div>
+                            <span style="font-size: 0.82rem; color: var(--color-accent);">Aug 15, 2026</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 2: MY PORTFOLIO
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-portfolio">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Portfolio Holdings & Asset Breakdown</h2>
+                        <p>Granular position analysis, cost basis tracking, sector weightings, and real-time Sharpe
+                            metrics.</p>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-file-csv"></i> Export CSV
+                        </button>
+                        <button class="btn btn-primary btn-sm" data-action="advisor">
+                            <i class="fa-solid fa-arrows-rotate"></i> Request Rebalance
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Risk & Volatility Metrics Strip -->
+                <div class="risk-metrics-strip">
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val">1.84</div>
+                        <div class="risk-metric-label">Sharpe Ratio (3Y)</div>
+                    </div>
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val">0.82</div>
+                        <div class="risk-metric-label">Portfolio Beta</div>
+                    </div>
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val">9.4%</div>
+                        <div class="risk-metric-label">Annual Volatility</div>
+                    </div>
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val">+4.2%</div>
+                        <div class="risk-metric-label">Alpha vs Benchmark</div>
+                    </div>
+                </div>
+
+                <!-- Rebalancing Recommendation Alert Banner -->
+                <div class="luxury-card"
+                    style="border-left: 4px solid var(--color-accent); margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.25rem 1.75rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                        <div>
+                            <strong style="font-size: 1rem;">Portfolio Within Target Risk Boundaries</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Equities at 45.7%
+                                (target 45.0%). No tax-loss trigger required until next quarterly cycle (Oct 2026).</p>
+                        </div>
+                    </div>
+                    <span class="status-badge active" style="font-size: 0.8rem; padding: 0.35rem 0.85rem;">Fiduciary
+                        Optimal</span>
+                </div>
+
+                <!-- Detailed Active Holdings Table -->
+                <div class="data-table-card">
+                    <div class="table-filter-bar">
+                        <div class="filter-tab-group">
+                            <button class="filter-tab-btn active">All Classes (4)</button>
+                            <button class="filter-tab-btn">Equities (1)</button>
+                            <button class="filter-tab-btn">Fixed Income (1)</button>
+                            <button class="filter-tab-btn">Real Estate (1)</button>
+                            <button class="filter-tab-btn">Private Debt (1)</button>
+                        </div>
+                        <div class="table-search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search holdings or ticker...">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Asset Strategy & Ticker</th>
+                                    <th>Cost Basis</th>
+                                    <th>Market Value</th>
+                                    <th>Unrealized Gain / Return</th>
+                                    <th>Allocation</th>
+                                    <th>Daily Change</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Stackly Global Mega-Cap Equity</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">AGME â€¢ Tier-1 Direct
+                                            Custody</div>
+                                    </td>
+                                    <td>$550,000</td>
+                                    <td><strong>$842,000</strong></td>
+                                    <td style="color: var(--color-accent);">+$292,000 (+53.1%)</td>
+                                    <td>45.7%</td>
+                                    <td style="color: var(--color-accent);"><i class="fa-solid fa-arrow-up"></i> +1.24%
+                                    </td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Sovereign & Corporate Bond Fund</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">SCBF â€¢ US & Euro High
+                                            Yield</div>
+                                    </td>
+                                    <td>$350,000</td>
+                                    <td><strong>$425,500</strong></td>
+                                    <td style="color: var(--color-accent);">+$75,500 (+21.5%)</td>
+                                    <td>23.1%</td>
+                                    <td style="color: var(--color-accent);"><i class="fa-solid fa-arrow-up"></i> +0.18%
+                                    </td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Commercial Real Estate Yield Trust</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">CREY â€¢ Core Senior
+                                            Secured</div>
+                                    </td>
+                                    <td>$200,000</td>
+                                    <td><strong>$295,000</strong></td>
+                                    <td style="color: var(--color-accent);">+$95,000 (+47.5%)</td>
+                                    <td>16.0%</td>
+                                    <td style="color: var(--color-accent);"><i class="fa-solid fa-arrow-up"></i> +0.45%
+                                    </td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Institutional Private Debt Vault</strong>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">IPDV â€¢ Floating
+                                            Senior Debt</div>
+                                    </td>
+                                    <td>$150,000</td>
+                                    <td><strong>$280,000</strong></td>
+                                    <td style="color: var(--color-accent);">+$130,000 (+86.6%)</td>
+                                    <td>15.2%</td>
+                                    <td style="color: var(--text-muted);">0.00% (Monthly)</td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="invest"
+                                            style="padding: 0.3rem 0.7rem; font-size: 0.78rem;">Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 3: INVESTMENTS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-investments">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Institutional Investment Opportunities</h2>
+                        <p>Explore pre-screened fiduciary investment vehicles, private debt tranches, and interactive
+                            projection models.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-action="advisor">
+                        <i class="fa-solid fa-user-tie"></i> Consult Portfolio Manager
+                    </button>
+                </div>
+
+                <!-- Interactive Wealth Projection Simulator -->
+                <div class="simulator-card">
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h3 style="margin-bottom: 0.25rem;"><i class="fa-solid fa-calculator text-gold"></i>
+                                Investment Growth Projection Simulator</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Simulate future
+                                portfolio trajectory with continuous monthly capital deployment.</p>
+                        </div>
+                        <span class="status-badge active">Algorithmic Compound Model</span>
+                    </div>
+
+                    <div class="slider-control-row">
+                        <div class="slider-label-row">
+                            <span>Monthly Capital Contribution:</span>
+                            <strong id="contribDisplay" class="text-gold">$5,000 / month</strong>
+                        </div>
+                        <input type="range" min="1000" max="25000" step="500" value="5000" class="slider-range-input"
+                            id="contribSlider">
+                    </div>
+
+                    <div class="slider-control-row">
+                        <div class="slider-label-row">
+                            <span>Investment Time Horizon:</span>
+                            <strong id="yearsDisplay" class="text-gold">10 Years</strong>
+                        </div>
+                        <input type="range" min="3" max="30" step="1" value="10" class="slider-range-input"
+                            id="yearsSlider">
+                    </div>
+
+                    <div class="slider-control-row">
+                        <div class="slider-label-row">
+                            <span>Expected Annualized Return:</span>
+                            <strong id="returnDisplay" class="text-gold">9.5%</strong>
+                        </div>
+                        <input type="range" min="5" max="15" step="0.5" value="9.5" class="slider-range-input"
+                            id="returnSlider">
+                    </div>
+
+                    <div class="projection-results-grid">
+                        <div class="projection-result-box">
+                            <span>Principal Added</span>
+                            <strong id="totalPrincipalVal">$600,000</strong>
+                        </div>
+                        <div class="projection-result-box">
+                            <span>Compound Gains</span>
+                            <strong id="totalGainsVal" class="gold">+$442,800</strong>
+                        </div>
+                        <div class="projection-result-box">
+                            <span>Projected Total Portfolio</span>
+                            <strong id="projectedTotalVal" class="gold">$2,885,300</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Institutional Fund Opportunities -->
+                <h3 style="margin-bottom: 1.25rem;">Curated Institutional Offerings</h3>
+                <div class="solutions-grid" style="margin-bottom: 2rem;">
+                    <!-- Fund 1 -->
+                    <div class="solution-card">
+                        <div class="solution-card-img-wrap">
+                            <img src="assets/investment.webp" alt="Global Tech & Innovation Fund">
+                        </div>
+                        <div class="solution-card-body">
+                            <span class="solution-num">01</span>
+                            <h3>Global Tech & AI Fund</h3>
+                            <p>Direct exposure to top 30 hyperscalers, silicon foundries, and enterprise generative AI
+                                infrastructure.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.85rem; margin: 1rem 0; padding: 0.5rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <span>3Y Ann. Return: <strong class="text-gold">+24.8%</strong></span>
+                                <span>Min: $50,000</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm w-100" data-action="invest">Request Factsheet</button>
+                        </div>
+                    </div>
+
+                    <!-- Fund 2 -->
+                    <div class="solution-card">
+                        <div class="solution-card-img-wrap">
+                            <img src="assets/retirement.webp" alt="European Infrastructure & Renewable Fund">
+                        </div>
+                        <div class="solution-card-body">
+                            <span class="solution-num">02</span>
+                            <h3>Clean Energy Infrastructure</h3>
+                            <p>Regulated utility assets, offshore wind transmission, and grid modernization projects
+                                with inflation indexing.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.85rem; margin: 1rem 0; padding: 0.5rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <span>Target Yield: <strong class="text-gold">8.6% Div</strong></span>
+                                <span>Min: $100,000</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm w-100" data-action="invest">Request Factsheet</button>
+                        </div>
+                    </div>
+
+                    <!-- Fund 3 -->
+                    <div class="solution-card">
+                        <div class="solution-card-img-wrap">
+                            <img src="assets/tax.webp" alt="High-Yield Sovereign & Corporate Basket">
+                        </div>
+                        <div class="solution-card-body">
+                            <span class="solution-num">03</span>
+                            <h3>Sovereign & IG Credit</h3>
+                            <p>Senior investment-grade sovereign bonds, OECD debt notes, and multi-currency capital
+                                preservation.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.85rem; margin: 1rem 0; padding: 0.5rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <span>Yield to Maturity: <strong class="text-gold">6.4%</strong></span>
+                                <span>Min: $25,000</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm w-100" data-action="invest">Request Factsheet</button>
+                        </div>
+                    </div>
+
+                    <!-- Fund 4 -->
+                    <div class="solution-card">
+                        <div class="solution-card-img-wrap">
+                            <img src="assets/estate.webp" alt="Quantitative Multi-Asset Hedge Strategy">
+                        </div>
+                        <div class="solution-card-body">
+                            <span class="solution-num">04</span>
+                            <h3>Global Macro Hedge</h3>
+                            <p>Algorithmic arbitrage across interest rate disparities, foreign exchange carry, and
+                                commodities hedges.</p>
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.85rem; margin: 1rem 0; padding: 0.5rem 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                                <span>Net Return (YTD): <strong class="text-gold">+18.2%</strong></span>
+                                <span>Min: $150,000</span>
+                            </div>
+                            <button class="btn btn-outline btn-sm w-100" data-action="invest">Request Factsheet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 4: TRANSACTIONS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-transactions">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Transaction Ledger & Cash Flow</h2>
+                        <p>Complete historical record of all capital inflows, withdrawals, dividend reinvestments, and
+                            rebalances.</p>
+                    </div>
+                    <button class="btn btn-outline btn-sm" data-action="download">
+                        <i class="fa-solid fa-download"></i> Download Full Ledger (CSV)
+                    </button>
+                </div>
+
+                <!-- Cash Flow Statistics -->
+                <div class="risk-metrics-strip" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val" style="color: var(--color-secondary);">$250,000</div>
+                        <div class="risk-metric-label">Total Inflows YTD</div>
+                    </div>
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val" style="color: var(--text-muted);">$45,000</div>
+                        <div class="risk-metric-label">Total Distributions YTD</div>
+                    </div>
+                    <div class="risk-metric-box">
+                        <div class="risk-metric-val" style="color: var(--color-accent);">$32,800</div>
+                        <div class="risk-metric-label">Reinvested Dividends YTD</div>
+                    </div>
+                </div>
+
+                <!-- Transaction Ledger Table -->
+                <div class="data-table-card">
+                    <div class="table-filter-bar">
+                        <div class="filter-tab-group" id="txnFilterGroup">
+                            <button class="filter-tab-btn active" data-filter="all">All (8)</button>
+                            <button class="filter-tab-btn" data-filter="deposit">Inflow / Deposit (3)</button>
+                            <button class="filter-tab-btn" data-filter="dividend">Dividends (2)</button>
+                            <button class="filter-tab-btn" data-filter="withdrawal">Withdrawal (2)</button>
+                            <button class="filter-tab-btn" data-filter="rebalance">Rebalance (1)</button>
+                        </div>
+                        <div class="table-search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="txnSearchInput" placeholder="Filter by ID or asset...">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="dashboard-table" id="txnTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction ID</th>
+                                    <th>Type</th>
+                                    <th>Description / Asset</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Receipt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-type="deposit">
+                                    <td>Sep 02, 2026</td>
+                                    <td><code>#TXN-94021</code></td>
+                                    <td><span class="status-badge active">Capital Deposit</span></td>
+                                    <td>Wire Transfer via JPMorgan Chase Checking</td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+$150,000.00</td>
+                                    <td><span class="status-badge active">Settled</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="rebalance">
+                                    <td>Aug 28, 2026</td>
+                                    <td><code>#TXN-93814</code></td>
+                                    <td><span class="status-badge active"
+                                            style="background: rgba(18, 84, 130, 0.4);">Rebalance</span></td>
+                                    <td>Tax-Loss Harvesting Trade (CRE Yield Trust)</td>
+                                    <td>$42,500.00</td>
+                                    <td><span class="status-badge active">Executed</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="withdrawal">
+                                    <td>Aug 15, 2026</td>
+                                    <td><code>#TXN-93402</code></td>
+                                    <td><span class="status-badge"
+                                            style="color: var(--text-muted); border-color: rgba(255,255,255,0.2);">Withdrawal</span>
+                                    </td>
+                                    <td>Quarterly Liquidity Distribution to Checking</td>
+                                    <td style="color: #ff8c8c; font-weight: 600;">-$15,000.00</td>
+                                    <td><span class="status-badge active">Completed</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="dividend">
+                                    <td>Aug 01, 2026</td>
+                                    <td><code>#TXN-92984</code></td>
+                                    <td><span class="status-badge active">Dividend</span></td>
+                                    <td>Quarterly Yield Reinvestment (Sovereign Bond Fund)</td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+$8,200.00</td>
+                                    <td><span class="status-badge active">Auto-Reinvested</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="deposit">
+                                    <td>Jul 12, 2026</td>
+                                    <td><code>#TXN-92109</code></td>
+                                    <td><span class="status-badge active">Capital Deposit</span></td>
+                                    <td>Automated Monthly Savings Mandate</td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+$50,000.00</td>
+                                    <td><span class="status-badge active">Settled</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="dividend">
+                                    <td>Jun 30, 2026</td>
+                                    <td><code>#TXN-91544</code></td>
+                                    <td><span class="status-badge active">Dividend</span></td>
+                                    <td>Semi-Annual Private Debt Distribution</td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+$24,600.00</td>
+                                    <td><span class="status-badge active">Settled</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="withdrawal">
+                                    <td>May 15, 2026</td>
+                                    <td><code>#TXN-90812</code></td>
+                                    <td><span class="status-badge"
+                                            style="color: var(--text-muted); border-color: rgba(255,255,255,0.2);">Withdrawal</span>
+                                    </td>
+                                    <td>Tax Reserve Transfer to Escrow</td>
+                                    <td style="color: #ff8c8c; font-weight: 600;">-$30,000.00</td>
+                                    <td><span class="status-badge active">Completed</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                                <tr data-type="deposit">
+                                    <td>Apr 01, 2026</td>
+                                    <td><code>#TXN-89945</code></td>
+                                    <td><span class="status-badge active">Capital Deposit</span></td>
+                                    <td>Annual Portfolio Top-Up Tranche</td>
+                                    <td style="color: var(--color-accent); font-weight: 600;">+$50,000.00</td>
+                                    <td><span class="status-badge active">Settled</span></td>
+                                    <td><button class="btn btn-outline btn-sm" data-action="download"
+                                            style="padding: 0.25rem 0.6rem; font-size: 0.75rem;"><i
+                                                class="fa-solid fa-download"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 5: REPORTS
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-reports">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Statements, Audits & Tax Disclosures</h2>
+                        <p>Certified fiduciary performance statements, tax summaries, and custodial verification
+                            certificates.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-action="download">
+                        <i class="fa-solid fa-file-pdf"></i> Download 2026 Tax Pack
+                    </button>
+                </div>
+
+                <!-- Custom Report Generator Card -->
+                <div class="luxury-card" style="padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-sliders text-gold"></i> Generate Custom
+                        Fiduciary Statement</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">Select customized
+                        date ranges and data metrics for certified CPA export.</p>
+
+                    <form id="customReportForm"
+                        style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; align-items: flex-end;"
+                        novalidate>
+                        <div class="form-group" style="margin: 0;">
+                            <label
+                                style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Start
+                                Date</label>
+                            <input type="date" id="reportStartDate" value="2026-01-01" class="form-input"
+                                style="padding: 0.6rem 0.85rem; font-size: 0.88rem;" required>
+                            <div class="form-error-msg" id="reportStartError"><i
+                                    class="fa-solid fa-circle-exclamation"></i> <span>Invalid start date</span></div>
+                        </div>
+                        <div class="form-group" style="margin: 0;">
+                            <label
+                                style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">End
+                                Date</label>
+                            <input type="date" id="reportEndDate" value="2026-09-01" class="form-input"
+                                style="padding: 0.6rem 0.85rem; font-size: 0.88rem;" required>
+                            <div class="form-error-msg" id="reportEndError"><i
+                                    class="fa-solid fa-circle-exclamation"></i> <span>End date must be after start
+                                    date</span></div>
+                        </div>
+                        <div class="form-group" style="margin: 0;">
+                            <label
+                                style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Format</label>
+                            <select class="form-input" style="padding: 0.6rem 0.85rem; font-size: 0.88rem;">
+                                <option>Certified PDF Statement</option>
+                                <option>Spreadsheet (.CSV)</option>
+                                <option>Excel (.XLSX)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="height: 44px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            <i class="fa-solid fa-file-arrow-down"></i> Generate & Download
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Available Official Statements List -->
+                <h3 style="margin-bottom: 1.25rem;">Official Certified Statements</h3>
+                <div class="doc-vault-list">
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div>
+                                <div class="doc-title">Q3 2026 Comprehensive Wealth Performance Statement</div>
+                                <div class="doc-meta">Generated Aug 31, 2026 â€¢ 2.4 MB â€¢ Certified Fiduciary Audit</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div>
+                                <div class="doc-title">2026 Semi-Annual Tax Optimization & 1099 Summary</div>
+                                <div class="doc-meta">Generated Jul 15, 2026 â€¢ 1.8 MB â€¢ CPA Ready</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <div class="doc-title">2025 Annual Fiduciary Stewardship & Risk Audit</div>
+                                <div class="doc-meta">Generated Jan 15, 2026 â€¢ 5.1 MB â€¢ Full Portfolio Review</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+
+                    <div class="doc-vault-item">
+                        <div class="doc-info">
+                            <div class="doc-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+                            <div>
+                                <div class="doc-title">ESG & Sustainable Impact Portfolio Disclosure</div>
+                                <div class="doc-meta">Generated Jun 30, 2026 â€¢ 3.2 MB â€¢ Global Standards</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm" data-action="download">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 6: PROFILE
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-profile">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Investor Credentials & Security Settings</h2>
+                        <p>Manage your KYC verified profile, risk tolerance score, and multi-factor authentication
+                            protocols.</p>
+                    </div>
+                    <span class="status-badge active" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                        <i class="fa-solid fa-shield-check"></i> KYC Level 3 Verified
+                    </span>
+                </div>
+
+                <div class="profile-form-grid">
+                    <!-- Column 1: Personal Credentials -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-user-shield text-gold"></i> Personal &
+                            Tax Identity</h3>
+                        <form id="profileDetailsForm" novalidate>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Full
+                                    Legal Name</label>
+                                <input type="text" id="userProfName" value="Arthur Pendelton" class="form-input"
+                                    required>
+                                <div class="form-error-msg" id="userProfNameError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Name must be at least 3
+                                        letters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Primary
+                                    Fiduciary Email</label>
+                                <input type="email" id="userProfEmail" value="a.pendelton@advisory-vault.com"
+                                    class="form-input" required>
+                                <div class="form-error-msg" id="userProfEmailError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Please enter a valid email
+                                        address.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Phone
+                                    Number (Encrypted SMS)</label>
+                                <input type="tel" id="userProfPhone" value="+1 (555) 392-8491" class="form-input"
+                                    required>
+                                <div class="form-error-msg" id="userProfPhoneError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Please enter a valid phone
+                                        number (min. 10 digits).</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Primary
+                                    Residence</label>
+                                <input type="text" id="userProfAddress"
+                                    value="740 Park Avenue, Apt 14B, New York, NY 10021" class="form-input" required>
+                                <div class="form-error-msg" id="userProfAddressError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Address must be at least 6
+                                        characters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Tax
+                                    Identification / SSN</label>
+                                <input type="text" value="***-**-4982 (Masked for Security)" class="form-input" disabled
+                                    style="opacity: 0.7;">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-floppy-disk"></i> Save Profile Details
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Column 2: Risk Profile & Security Protocols -->
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <!-- Risk Profile Card -->
+                        <div class="luxury-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-gauge-high text-gold"></i>
+                                Investment Risk Mandate</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Current
+                                Profile: <strong>Balanced Growth & Capital Preservation</strong></p>
+
+                            <div class="slider-control-row">
+                                <div class="slider-label-row">
+                                    <span>Risk Tolerance Score:</span>
+                                    <strong class="text-gold">72 / 100 (Growth)</strong>
+                                </div>
+                                <input type="range" min="10" max="100" value="72" class="slider-range-input">
+                            </div>
+
+                            <div
+                                style="font-size: 0.82rem; color: var(--text-muted); background: rgba(5,26,41,0.6); padding: 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.08);">
+                                <i class="fa-solid fa-circle-info text-gold"></i> Mandates above 80 require direct
+                                advisory partner consent to ensure liquidity guardrails.
+                            </div>
+                        </div>
+
+                        <!-- Security & 2FA Card -->
+                        <div class="luxury-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-lock text-gold"></i> Security &
+                                Authentication</h3>
+
+                            <div class="security-toggle-row">
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Two-Factor Authentication (2FA)</strong>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Hardware token &
+                                        Authenticator app</p>
+                                </div>
+                                <span class="status-badge active">Active</span>
+                            </div>
+
+                            <div class="security-toggle-row">
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Biometric & Passkey Access</strong>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">FIDO2 Certified
+                                        Device Key</p>
+                                </div>
+                                <span class="status-badge active">Enabled</span>
+                            </div>
+
+                            <div class="security-toggle-row" style="border: none;">
+                                <div>
+                                    <strong style="font-size: 0.95rem;">Linked Custodial Wire Bank</strong>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">JPMorgan Chase
+                                        Private Bank (***9102)</p>
+                                </div>
+                                <button class="btn btn-outline btn-sm"
+                                    style="padding: 0.3rem 0.75rem; font-size: 0.78rem;">Manage</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================================================================
+                 TAB 7: SUPPORT
+                 ====================================================================== -->
+            <div class="dashboard-tab-content" id="tab-support">
+                <div class="tab-header-banner">
+                    <div class="tab-header-info">
+                        <h2>Dedicated Fiduciary Advisory Support Desk</h2>
+                        <p>Direct line of communication to your designated managing partner, custodial desk, and
+                            research staff.</p>
+                    </div>
+                    <span class="status-badge active">
+                        <i class="fa-solid fa-circle" style="font-size: 0.6rem; color: #4ade80;"></i> Senior Partner
+                        Online
+                    </span>
+                </div>
+
+                <!-- Assigned Advisor Highlight Card -->
+                <div class="client-advisor-card" style="margin-bottom: 2rem;">
+                    <img src="assets/advisor1.webp" alt="Marcus Vance" class="client-advisor-avatar">
+                    <div class="client-advisor-info">
+                        <h4>Marcus Vance, CFA</h4>
+                        <p>Senior Partner & Chief Investment Strategist</p>
+                        <span
+                            style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.75rem;">Direct
+                            Advisory Mandate: 6 Years Stewardship â€¢ Corporate Executive Desk</span>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <span style="font-size: 0.85rem; color: var(--color-secondary);"><i
+                                    class="fa-solid fa-phone text-gold"></i> +91 98765 43210 ext. 104</span>
+                            <span style="font-size: 0.85rem; color: var(--color-secondary);"><i
+                                    class="fa-solid fa-envelope text-gold"></i> info@stackly.com</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm" data-action="advisor">
+                        <i class="fa-solid fa-calendar-check"></i> Book 1-on-1 Review
+                    </button>
+                </div>
+
+                <div class="profile-form-grid">
+                    <!-- Priority Inquiry Form -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope-open-text text-gold"></i>
+                            Submit Priority Inquiry</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Fiduciary
+                            inquiries receive guaranteed response within 2 hours during market sessions.</p>
+
+                        <form id="supportTicketForm" novalidate>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Inquiry
+                                    Topic</label>
+                                <select id="supportTopic" class="form-input" required>
+                                    <option>Portfolio Rebalancing or Allocation</option>
+                                    <option>Tax-Loss Harvesting & 1099 Query</option>
+                                    <option>Custodial Wire & Liquidity Request</option>
+                                    <option>Estate & Trust Restructuring</option>
+                                    <option>General Fiduciary Question</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Subject</label>
+                                <input type="text" id="supportSubject" placeholder="e.g. Inquire on Q4 Liquidity Event"
+                                    class="form-input" required>
+                                <div class="form-error-msg" id="supportSubjectError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Subject must be at least 4
+                                        characters.</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Detailed
+                                    Request</label>
+                                <textarea rows="4" id="supportMessage"
+                                    placeholder="Describe your inquiry with any relevant account or mandate parameters..."
+                                    class="form-input" required></textarea>
+                                <div class="form-error-msg" id="supportMessageError"><i
+                                        class="fa-solid fa-circle-exclamation"></i> <span>Please describe your request
+                                        (min. 15 characters).</span></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <span>Send Secure Request</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Frequently Addressed Advisory Questions -->
+                    <div class="luxury-card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1.25rem;"><i class="fa-solid fa-circle-question text-gold"></i>
+                            Advisory Guidelines FAQ</h3>
+
+                        <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div class="faq-item active">
+                                <div class="faq-question">
+                                    <h4>How quickly are capital withdrawals executed?</h4>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Liquid cash buffer distributions are transmitted via Fedwire on the same business
+                                        day if submitted prior to 1:00 PM EST. Fixed income or fund redemptions require
+                                        standard T+1 settlement.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Can Stackly synchronize with my family CPA?</h4>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes. We grant read-only CPA access to automated 1099 schedules and realized
+                                        capital gain/loss ledgers to eliminate manual tax filing friction.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>How are advisory fees calculated and billed?</h4>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>As a 100% fee-only fiduciary, fees are calculated as a tiered basis point fee on
+                                        average daily assets under management, billed quarterly in arrears. We never
+                                        accept transaction commissions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client & User Login | Stackly Wealth Advisory</title>
+    <meta name="description" content="Secure portal access for Stackly Wealth Advisory users and private wealth clients.">
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-page-wrapper">
+        <!-- Top-Left: Back to Home -->
+        <a href="index.html" class="auth-back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+
+        <div class="auth-card-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="auth-brand-logo">
+                    <h1 class="auth-title">Welcome Back</h1>
+                    <p class="auth-subtitle">Access your portfolio analytics and wealth roadmap.</p>
+                </div>
+
+                <!-- Login As: User / Client Tabs -->
+                <div class="role-toggle-group">
+                    <button type="button" class="role-tab-btn active" data-role="User">
+                        <i class="fa-solid fa-user"></i> User Portal
+                    </button>
+                    <button type="button" class="role-tab-btn" data-role="Client">
+                        <i class="fa-solid fa-crown"></i> Client Portal
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form" novalidate>
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="loginEmail">Email Address</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input type="email" id="loginEmail" class="auth-input" placeholder="name@domain.com" required autocomplete="email">
+                        </div>
+                        <div class="form-error-msg" id="loginEmailError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Please enter a valid email address.</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="loginPassword">Password</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="loginPassword" class="auth-input" placeholder="••••••••••••" required autocomplete="current-password">
+                            <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error-msg" id="loginPasswordError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Password must be at least 8 characters.</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-options-row">
+                        <label class="auth-remember">
+                            <input type="checkbox" id="rememberMe" checked>
+                            <span>Remember device</span>
+                        </label>
+                        <a href="404.html" class="auth-forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg auth-submit-btn" id="loginSubmitBtn">
+                        <span>Sign In to Portal</span>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    Don't have an account? <a href="signup.html">Create an Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

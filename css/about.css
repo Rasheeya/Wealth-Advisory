@@ -1,0 +1,374 @@
+/* ==========================================================================
+   STACKLY WEALTH ADVISORY - ABOUT PAGE STYLES (ABOUT.HTML)
+   Colors: #0B3C5D, #FFFFFF, #D4AF37
+   ========================================================================== */
+
+/* Our Story (2-Col) */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-image-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.story-image-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.story-content h2 {
+    margin-bottom: 1.25rem;
+}
+
+.story-content p {
+    margin-bottom: 1.25rem;
+}
+
+/* Our Mission (Large Statement Section) */
+.mission-section {
+    background: linear-gradient(180deg, #051a29 0%, #093452 50%, #051a29 100%);
+    border-top: 1px solid var(--border-gold);
+    border-bottom: 1px solid var(--border-gold);
+    position: relative;
+    text-align: center;
+    padding: 7rem 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.mission-statement {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+    font-style: italic;
+    color: var(--color-secondary);
+    line-height: 1.45;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.mission-statement::before,
+.mission-statement::after {
+    color: var(--color-accent);
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.mission-statement::before {
+    content: '“';
+    top: -20px;
+    left: 0;
+}
+
+.mission-statement::after {
+    content: '”';
+    bottom: -40px;
+    right: 0;
+}
+
+.mission-author {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Our Values (4 Cards) */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+}
+
+.value-card {
+    background: rgba(11, 60, 93, 0.35);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    padding: 2.5rem 1.75rem;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.value-icon {
+    width: 65px;
+    height: 65px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem auto;
+    transition: transform 0.5s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-gold);
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.15) rotate(360deg);
+}
+
+.value-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.value-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Our Advisors (4 Cards) */
+.advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.advisor-card {
+    background: rgba(11, 60, 93, 0.35);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.advisor-img-wrap {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-gold);
+    background: rgba(5, 26, 41, 0.6);
+}
+
+.advisor-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s ease;
+}
+
+.advisor-details {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.advisor-name {
+    font-size: 1.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.advisor-role {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.advisor-experience {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.advisor-expertise {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    color: var(--color-accent);
+}
+
+.advisor-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-gold);
+}
+
+.advisor-card:hover .advisor-img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Our Approach (5-Step Milestone Timeline) */
+.approach-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.approach-step {
+    background: rgba(11, 60, 93, 0.35);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.25rem;
+    text-align: center;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.approach-number {
+    width: 45px;
+    height: 45px;
+    background: var(--color-primary);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 1.25rem auto;
+}
+
+.approach-step h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.approach-step p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.approach-step:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (ABOUT) (320px - 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .values-grid,
+    .advisors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .approach-steps {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+    .mission-section {
+        padding: 4.5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-section {
+        padding: 3.5rem 0;
+    }
+    .mission-statement {
+        font-size: 1.35rem;
+        padding: 0 1.25rem;
+    }
+    .mission-statement::before,
+    .mission-statement::after {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .values-grid,
+    .advisors-grid {
+        grid-template-columns: 1fr;
+    }
+    .value-card {
+        padding: 2rem 1.25rem;
+    }
+    .advisor-img-wrap {
+        height: 380px;
+    }
+    .advisor-img-wrap img {
+        object-position: top center;
+    }
+}
+
+@media (max-width: 480px) {
+    .advisor-img-wrap {
+        height: 350px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mission-section {
+        padding: 2.75rem 0;
+    }
+    .mission-statement {
+        font-size: 1.15rem;
+        padding: 0 0.75rem;
+    }
+    .mission-statement::before {
+        top: -12px;
+        left: 2px;
+    }
+    .mission-statement::after {
+        bottom: -25px;
+        right: 2px;
+    }
+    .advisor-img-wrap {
+        height: 330px;
+    }
+    .value-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .advisor-img-wrap {
+        height: 310px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mission-statement {
+        font-size: 1.05rem;
+    }
+    .advisor-img-wrap {
+        height: 280px;
+    }
+    .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}

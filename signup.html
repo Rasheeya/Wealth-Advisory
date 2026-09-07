@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account | Stackly Wealth Advisory</title>
+    <meta name="description" content="Open a wealth advisory or client portal account with Stackly.">
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-page-wrapper">
+        <!-- Top-Left: Back to Home -->
+        <a href="index.html" class="auth-back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+
+        <div class="auth-card-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <img src="assets/Brand-logo.webp" alt="Stackly Wealth Advisory" class="auth-brand-logo">
+                    <h1 class="auth-title">Create Your Account</h1>
+                    <p class="auth-subtitle">Join Stackly for institutional wealth management.</p>
+                </div>
+
+                <!-- Signup As: User / Client Tabs -->
+                <div class="role-toggle-group">
+                    <button type="button" class="role-tab-btn active" data-role="User">
+                        <i class="fa-solid fa-user"></i> User Account
+                    </button>
+                    <button type="button" class="role-tab-btn" data-role="Client">
+                        <i class="fa-solid fa-crown"></i> Client Account
+                    </button>
+                </div>
+
+                <!-- Signup Form -->
+                <form id="signupForm" class="auth-form" novalidate>
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signupName">Full Name</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input type="text" id="signupName" class="auth-input" placeholder="e.g. Jonathan Vance" required autocomplete="name">
+                        </div>
+                        <div class="form-error-msg" id="signupNameError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Full name must be at least 3 letters (letters and spaces only).</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signupEmail">Email Address</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input type="email" id="signupEmail" class="auth-input" placeholder="name@domain.com" required autocomplete="email">
+                        </div>
+                        <div class="form-error-msg" id="signupEmailError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Please provide a valid corporate or personal email.</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signupPhone">Phone Number</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-phone input-icon"></i>
+                            <input type="tel" id="signupPhone" class="auth-input" placeholder="+1 (555) 000-0000" required autocomplete="tel">
+                        </div>
+                        <div class="form-error-msg" id="signupPhoneError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Please enter a valid telephone number (min. 10 digits).</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signupPassword">Password</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="signupPassword" class="auth-input" placeholder="••••••••••••" required autocomplete="new-password">
+                            <button type="button" class="password-toggle-btn" data-target="signupPassword" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <!-- Live Password Criteria Checklist -->
+                        <div class="password-criteria-list" id="passwordCriteria">
+                            <div class="criteria-item" id="critLength"><i class="fa-solid fa-circle-check"></i> Min. 8 Characters</div>
+                            <div class="criteria-item" id="critUpper"><i class="fa-solid fa-circle-check"></i> 1 Uppercase Letter</div>
+                            <div class="criteria-item" id="critNumber"><i class="fa-solid fa-circle-check"></i> 1 Number</div>
+                            <div class="criteria-item" id="critSpecial"><i class="fa-solid fa-circle-check"></i> 1 Special Character</div>
+                        </div>
+                        <div class="form-error-msg" id="signupPasswordError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Password must satisfy all security requirements above.</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="signupConfirmPassword">Confirm Password</label>
+                        <div class="auth-input-wrapper">
+                            <i class="fa-solid fa-shield-check input-icon"></i>
+                            <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="••••••••••••" required autocomplete="new-password">
+                            <button type="button" class="password-toggle-btn" data-target="signupConfirmPassword" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error-msg" id="signupConfirmError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Passwords do not match.</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-remember" style="font-size: 0.85rem; cursor: pointer;">
+                            <input type="checkbox" id="signupTerms" required>
+                            <span>I accept the <a href="404.html" class="auth-forgot-link">Fiduciary Advisory Terms</a> &amp; Privacy Policy</span>
+                        </label>
+                        <div class="form-error-msg" id="signupTermsError">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>You must agree to the fiduciary terms to register.</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg auth-submit-btn" id="signupSubmitBtn">
+                        <span>Register &amp; Create Account</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    Already have an account? <a href="login.html">Sign In here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & Main Unified JS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
