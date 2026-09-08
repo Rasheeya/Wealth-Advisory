@@ -265,6 +265,21 @@
     background: rgba(11, 60, 93, 0.4);
     border: 1px solid var(--border-gold);
     border-radius: var(--radius-full);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.topbar-user-profile:hover {
+    background: rgba(11, 60, 93, 0.7);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.topbar-user-profile:hover .topbar-user-icon {
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
 }
 
 .topbar-user-icon {
@@ -279,6 +294,8 @@
     color: var(--color-accent);
     font-size: 1.15rem;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: var(--transition-fast);
 }
 
 .user-avatar-sm {
@@ -1407,7 +1424,7 @@ input[type="date"].form-input {
         transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
         z-index: 2000;
         background: #051a29;
-        padding: 2rem 1.75rem;
+        padding: 2rem 1.75rem calc(3.5rem + env(safe-area-inset-bottom, 0px)) 1.75rem;
         overflow-y: auto;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
@@ -1538,6 +1555,10 @@ input[type="date"].form-input {
         background: transparent;
         border: none;
         box-shadow: none;
+        text-decoration: none;
+        color: inherit;
+        display: inline-flex;
+        cursor: pointer;
     }
     .topbar-user-profile .user-name-role {
         display: none !important;
@@ -1549,6 +1570,13 @@ input[type="date"].form-input {
         border-radius: 50%;
         background: rgba(11, 60, 93, 0.4);
         border: 1px solid var(--border-gold);
+        cursor: pointer;
+        transition: var(--transition-fast);
+    }
+    .topbar-user-profile:hover .topbar-user-icon,
+    .topbar-user-icon:hover {
+        background: var(--color-accent);
+        color: var(--color-primary-dark);
     }
     .topbar-notify-btn {
         width: 40px;
@@ -1686,7 +1714,7 @@ input[type="date"].form-input {
 
 @media (max-width: 480px) {
     .dashboard-sidebar {
-        padding: 1.5rem 1.25rem;
+        padding: 1.5rem 1.25rem calc(3.5rem + env(safe-area-inset-bottom, 0px)) 1.25rem;
     }
     .sidebar-item {
         padding: 0.85rem 1rem;
@@ -1782,7 +1810,7 @@ input[type="date"].form-input {
 
 @media (max-width: 360px) {
     .dashboard-sidebar {
-        padding: 1.25rem 0.85rem;
+        padding: 1.25rem 0.85rem calc(3rem + env(safe-area-inset-bottom, 0px)) 0.85rem;
     }
     .sidebar-item {
         padding: 0.75rem 0.85rem;

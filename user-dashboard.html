@@ -96,7 +96,7 @@
                         <i class="fa-solid fa-bell"></i>
                         <span class="notify-badge">2</span>
                     </button>
-                    <div class="topbar-user-profile">
+                    <a href="404.html" class="topbar-user-profile" aria-label="User Profile">
                         <div class="topbar-user-icon">
                             <i class="fa-solid fa-circle-user"></i>
                         </div>
@@ -104,7 +104,7 @@
                             <span class="uname">Arthur Pendelton</span>
                             <span class="urole">a.pendelton@advisory-vault.com</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </header>
 
@@ -795,26 +795,25 @@
                         date ranges and data metrics for certified CPA export.</p>
 
                     <form id="customReportForm"
-                        style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; align-items: flex-end;"
+                        style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; align-items: flex-start;"
                         novalidate>
                         <div class="form-group" style="margin: 0;">
                             <label
                                 style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Start
                                 Date</label>
-                            <input type="date" id="reportStartDate" value="2026-01-01" class="form-input"
+                            <input type="date" id="reportStartDate" class="form-input"
                                 style="padding: 0.6rem 0.85rem; font-size: 0.88rem;" required>
                             <div class="form-error-msg" id="reportStartError"><i
-                                    class="fa-solid fa-circle-exclamation"></i> <span>Invalid start date</span></div>
+                                    class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                         </div>
                         <div class="form-group" style="margin: 0;">
                             <label
                                 style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">End
                                 Date</label>
-                            <input type="date" id="reportEndDate" value="2026-09-01" class="form-input"
+                            <input type="date" id="reportEndDate" class="form-input"
                                 style="padding: 0.6rem 0.85rem; font-size: 0.88rem;" required>
                             <div class="form-error-msg" id="reportEndError"><i
-                                    class="fa-solid fa-circle-exclamation"></i> <span>End date must be after start
-                                    date</span></div>
+                                    class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                         </div>
                         <div class="form-group" style="margin: 0;">
                             <label
@@ -825,10 +824,13 @@
                                 <option>Excel (.XLSX)</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary"
-                            style="height: 44px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                            <i class="fa-solid fa-file-arrow-down"></i> Generate & Download
-                        </button>
+                        <div class="form-group" style="margin: 0;">
+                            <label style="font-size: 0.82rem; display: block; margin-bottom: 0.35rem; visibility: hidden;">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; height: 44px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <i class="fa-solid fa-file-arrow-down"></i> Generate & Download
+                            </button>
+                        </div>
                     </form>
                 </div>
 
@@ -917,8 +919,7 @@
                                 <input type="text" id="userProfName" value="Arthur Pendelton" class="form-input"
                                     required>
                                 <div class="form-error-msg" id="userProfNameError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Name must be at least 3
-                                        letters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -927,8 +928,7 @@
                                 <input type="email" id="userProfEmail" value="a.pendelton@advisory-vault.com"
                                     class="form-input" required>
                                 <div class="form-error-msg" id="userProfEmailError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Please enter a valid email
-                                        address.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -937,8 +937,7 @@
                                 <input type="tel" id="userProfPhone" value="+1 (555) 392-8491" class="form-input"
                                     required>
                                 <div class="form-error-msg" id="userProfPhoneError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Please enter a valid phone
-                                        number (min. 10 digits).</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -947,8 +946,7 @@
                                 <input type="text" id="userProfAddress"
                                     value="740 Park Avenue, Apt 14B, New York, NY 10021" class="form-input" required>
                                 <div class="form-error-msg" id="userProfAddressError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Address must be at least 6
-                                        characters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -1088,8 +1086,7 @@
                                 <input type="text" id="supportSubject" placeholder="e.g. Inquire on Q4 Liquidity Event"
                                     class="form-input" required>
                                 <div class="form-error-msg" id="supportSubjectError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Subject must be at least 4
-                                        characters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -1099,8 +1096,7 @@
                                     placeholder="Describe your inquiry with any relevant account or mandate parameters..."
                                     class="form-input" required></textarea>
                                 <div class="form-error-msg" id="supportMessageError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Please describe your request
-                                        (min. 15 characters).</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <button type="submit" class="btn btn-primary">
                                 <span>Send Secure Request</span>

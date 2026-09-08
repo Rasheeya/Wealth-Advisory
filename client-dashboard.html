@@ -101,7 +101,7 @@
                         <i class="fa-solid fa-bell"></i>
                         <span class="notify-badge">2</span>
                     </button>
-                    <div class="topbar-user-profile">
+                    <a href="404.html" class="topbar-user-profile" aria-label="User Profile">
                         <div class="topbar-user-icon">
                             <i class="fa-solid fa-circle-user"></i>
                         </div>
@@ -109,7 +109,7 @@
                             <span class="uname">Helena Rothschild</span>
                             <span class="urole">h.rothschild@familyoffice.ch</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </header>
 
@@ -834,8 +834,7 @@
                                 <input type="text" id="clientEntityName" value="Rothschild Heritage Global Family Trust"
                                     class="form-input" required>
                                 <div class="form-error-msg" id="clientEntityNameError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Entity name must be at least 4
-                                        characters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -844,8 +843,7 @@
                                 <input type="text" id="clientDomicile"
                                     value="Wilmington, Delaware / Zurich Custodial Desk" class="form-input" required>
                                 <div class="form-error-msg" id="clientDomicileError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Jurisdiction must be at least
-                                        3 characters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -854,8 +852,7 @@
                                 <input type="text" id="clientFiduciaryName" value="Helena Rothschild" class="form-input"
                                     required>
                                 <div class="form-error-msg" id="clientFiduciaryNameError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Fiduciary name must be at
-                                        least 3 letters.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -989,11 +986,10 @@
                                 <label
                                     style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Preferred
                                     Date</label>
-                                <input type="date" id="clientMeetingDate" value="2026-09-15" class="form-input"
+                                <input type="date" id="clientMeetingDate" class="form-input"
                                     required>
                                 <div class="form-error-msg" id="clientMeetingDateError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Meeting date cannot be in the
-                                        past.</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <div class="form-group">
                                 <label
@@ -1003,8 +999,7 @@
                                     placeholder="e.g. Discussing the upcoming secondary private equity liquidity distribution..."
                                     class="form-input" required></textarea>
                                 <div class="form-error-msg" id="clientMeetingAgendaError"><i
-                                        class="fa-solid fa-circle-exclamation"></i> <span>Please describe agenda topics
-                                        (min. 15 characters).</span></div>
+                                        class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
                             <button type="submit" class="btn btn-primary">
                                 <span>Confirm Consultation Request</span>

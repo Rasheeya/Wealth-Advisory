@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -148,16 +148,16 @@
                                     <label class="form-label" for="contactName">Full Name *</label>
                                     <input type="text" id="contactName" class="form-control"
                                         placeholder="e.g. Eleanor Vance" required>
-                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
-                                        <span>Please provide your full name (at least 3 letters).</span>
+                                    <div class="form-error-msg" id="contactNameError"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>This field is required</span>
                                     </div>
                                 </div>
                                 <div class="form-group-full">
                                     <label class="form-label" for="contactEmail">Email Address *</label>
                                     <input type="email" id="contactEmail" class="form-control"
                                         placeholder="e.g. eleanor@company.com" required>
-                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
-                                        <span>Please provide a valid email address.</span>
+                                    <div class="form-error-msg" id="contactEmailError"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>This field is required</span>
                                     </div>
                                 </div>
                             </div>
@@ -167,16 +167,16 @@
                                     <label class="form-label" for="contactPhone">Phone Number *</label>
                                     <input type="tel" id="contactPhone" class="form-control"
                                         placeholder="+1 (555) 000-0000" required>
-                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
-                                        <span>Please provide a valid phone number (min. 10 digits).</span>
+                                    <div class="form-error-msg" id="contactPhoneError"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>This field is required</span>
                                     </div>
                                 </div>
                                 <div class="form-group-full">
                                     <label class="form-label" for="contactSubject">Subject of Inquiry *</label>
                                     <input type="text" id="contactSubject" class="form-control"
                                         placeholder="e.g. Portfolio Allocation & Tax Strategy" required>
-                                    <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i>
-                                        <span>Please specify the subject of your inquiry (min. 4 letters).</span>
+                                    <div class="form-error-msg" id="contactSubjectError"><i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>This field is required</span>
                                     </div>
                                 </div>
                             </div>
@@ -186,8 +186,7 @@
                                 <textarea id="contactMessage" class="form-control"
                                     placeholder="Tell us about your portfolio size, time horizon, or specific advisory needs..."
                                     required></textarea>
-                                <div class="form-error-msg"><i class="fa-solid fa-circle-exclamation"></i> <span>Please
-                                        describe your advisory requirements (at least 20 characters).</span></div>
+                                <div class="form-error-msg" id="contactMessageError"><i class="fa-solid fa-circle-exclamation"></i> <span>This field is required</span></div>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-lg" id="contactSubmitBtn"
@@ -430,14 +429,18 @@
                         retirement roadmaps for discerning families and institutions worldwide.
                     </p>
                     <div class="footer-socials">
-                        <a href="404.html" class="social-link" title="LinkedIn"><img src="assets/linkedin.webp"
-                                alt="LinkedIn"></a>
-                        <a href="404.html" class="social-link" title="Twitter / X"><img src="assets/twitter.webp"
-                                alt="Twitter"></a>
-                        <a href="404.html" class="social-link" title="Facebook"><img src="assets/facebook.webp"
-                                alt="Facebook"></a>
-                        <a href="404.html" class="social-link" title="Instagram"><img src="assets/instagram.webp"
-                                alt="Instagram"></a>
+                        <a href="404.html" class="social-link social-linkedin" title="LinkedIn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="404.html" class="social-link social-twitter" title="Twitter / X" aria-label="Twitter / X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="404.html" class="social-link social-facebook" title="Facebook" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="404.html" class="social-link social-instagram" title="Instagram" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
 

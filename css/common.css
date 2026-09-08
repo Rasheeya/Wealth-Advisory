@@ -810,7 +810,9 @@ input[type="date"].form-input {
 
 .has-error .form-input,
 .has-error .form-control,
-.has-error .auth-input {
+.has-error .auth-input,
+.has-error textarea,
+.has-error select {
     border-color: #EF4444 !important;
     background: rgba(239, 68, 68, 0.08) !important;
     box-shadow: 0 0 12px rgba(239, 68, 68, 0.3) !important;
@@ -826,7 +828,9 @@ input[type="date"].form-input {
 
 .has-success .form-input,
 .has-success .form-control,
-.has-success .auth-input {
+.has-success .auth-input,
+.has-success textarea,
+.has-success select {
     border-color: rgba(74, 222, 128, 0.8) !important;
 }
 

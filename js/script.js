@@ -14,7 +14,9 @@
     // Helper: Detect Current Page
     function getCurrentPage() {
         const path = window.location.pathname;
-        const page = path.split('/').pop() || 'index.html';
+        let page = path.split('/').pop() || 'index.html';
+        if (page.includes('?')) page = page.split('?')[0];
+        if (page.includes('#')) page = page.split('#')[0];
         if (page === '' || page === '/') return 'index.html';
         return page.toLowerCase();
     }
@@ -269,7 +271,15 @@
                 return;
             }
 
-            // 2. Locate closest link or button
+            // 2. User/Profile icon or pill click routes directly to 404.html
+            if (e.target.closest('.topbar-user-profile') || e.target.closest('.topbar-user-icon') || e.target.classList.contains('fa-circle-user')) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = '404.html';
+                return;
+            }
+
+            // 3. Locate closest link or button
             const btn = e.target.closest('button');
             const link = e.target.closest('a');
             const target = btn || link;
@@ -449,7 +459,7 @@
 
     const FormValidators = {
         name: (val) => {
-            if (!val || !val.trim()) return { valid: false, message: 'Full legal name is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             const trimmed = val.trim();
             if (trimmed.length < 3) return { valid: false, message: 'Name must be at least 3 letters.' };
             if (trimmed.length > 50) return { valid: false, message: 'Name cannot exceed 50 characters.' };
@@ -458,7 +468,7 @@
             return { valid: true };
         },
         email: (val) => {
-            if (!val || !val.trim()) return { valid: false, message: 'Email address is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             const trimmed = val.trim();
             if (!STRICT_EMAIL_REGEX.test(trimmed) || trimmed.includes('..') || trimmed.startsWith('.') || trimmed.includes('@.') || trimmed.includes('.@')) {
                 return { valid: false, message: 'Please enter a valid email address (e.g. name@domain.com).' };
@@ -466,7 +476,7 @@
             return { valid: true };
         },
         phone: (val) => {
-            if (!val || !val.trim()) return { valid: false, message: 'Phone number is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             const trimmed = val.trim();
             if (!STRICT_PHONE_CHARS_REGEX.test(trimmed)) {
                 return { valid: false, message: 'Phone number contains invalid characters.' };
@@ -477,12 +487,12 @@
             return { valid: true };
         },
         loginPassword: (val) => {
-            if (!val) return { valid: false, message: 'Password is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val.length < 8) return { valid: false, message: 'Password must be at least 8 characters.' };
             return { valid: true };
         },
         signupPassword: (val) => {
-            if (!val) return { valid: false, message: 'Password is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val.length < 8) return { valid: false, message: 'Password must be at least 8 characters long.' };
             if (!/[A-Z]/.test(val)) return { valid: false, message: 'Password must include at least 1 uppercase letter.' };
             if (!/[a-z]/.test(val)) return { valid: false, message: 'Password must include at least 1 lowercase letter.' };
@@ -491,31 +501,31 @@
             return { valid: true };
         },
         confirmPassword: (val, originalPwd) => {
-            if (!val) return { valid: false, message: 'Please confirm your password.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val !== originalPwd) return { valid: false, message: 'Passwords do not match.' };
             return { valid: true };
         },
         terms: (checked) => {
-            if (!checked) return { valid: false, message: 'You must accept the Fiduciary Advisory Terms to register.' };
+            if (!checked) return { valid: false, message: 'This field is required' };
             return { valid: true };
         },
         subject: (val, min = 4) => {
-            if (!val || !val.trim()) return { valid: false, message: 'Subject is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val.trim().length < min) return { valid: false, message: `Subject must be at least ${min} characters.` };
             return { valid: true };
         },
         message: (val, min = 20) => {
-            if (!val || !val.trim()) return { valid: false, message: 'Message content is required.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val.trim().length < min) return { valid: false, message: `Please provide more details (at least ${min} characters).` };
             return { valid: true };
         },
         text: (val, label, min = 3) => {
-            if (!val || !val.trim()) return { valid: false, message: `${label} is required.` };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             if (val.trim().length < min) return { valid: false, message: `${label} must be at least ${min} characters.` };
             return { valid: true };
         },
         dateFuture: (val) => {
-            if (!val) return { valid: false, message: 'Please select a consultation date.' };
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
             const chosen = new Date(val);
             if (isNaN(chosen.getTime())) return { valid: false, message: 'Invalid date format.' };
             const today = new Date();
@@ -523,9 +533,15 @@
             if (chosen < today) return { valid: false, message: 'Date cannot be in the past.' };
             return { valid: true };
         },
+        dateRequired: (val) => {
+            if (!val || !val.trim()) return { valid: false, message: 'This field is required' };
+            const d = new Date(val);
+            if (isNaN(d.getTime())) return { valid: false, message: 'Invalid date format.' };
+            return { valid: true };
+        },
         dateRange: (startVal, endVal) => {
-            if (!startVal) return { valid: false, field: 'start', message: 'Start date is required.' };
-            if (!endVal) return { valid: false, field: 'end', message: 'End date is required.' };
+            if (!startVal || !startVal.trim()) return { valid: false, field: 'start', message: 'This field is required' };
+            if (!endVal || !endVal.trim()) return { valid: false, field: 'end', message: 'This field is required' };
             const s = new Date(startVal);
             const e = new Date(endVal);
             if (isNaN(s.getTime())) return { valid: false, field: 'start', message: 'Invalid start date.' };
@@ -550,23 +566,21 @@
         };
 
         field.addEventListener('blur', () => {
-            if ((field.value && field.value.trim().length > 0) || (field.closest('.auth-form-group, .form-group-full, .form-group') && field.closest('.auth-form-group, .form-group-full, .form-group').classList.contains('has-error'))) {
-                validate();
-            }
+            validate();
         });
 
         field.addEventListener('input', () => {
             const group = field.closest('.auth-form-group') || field.closest('.form-group-full') || field.closest('.form-group') || field.parentElement;
             if (group && group.classList.contains('has-error')) {
-                const res = validatorFn(field.value);
-                if (res.valid) {
-                    clearFieldError(field, errorElem, true);
-                } else {
-                    const span = errorElem ? errorElem.querySelector('span') : (group.querySelector('.form-error-msg span'));
-                    if (span && res.message) span.textContent = res.message;
-                }
+                validate();
             }
         });
+
+        if (field.type === 'checkbox' || field.type === 'date' || field.tagName === 'SELECT') {
+            field.addEventListener('change', () => {
+                validate();
+            });
+        }
 
         return validate;
     }
@@ -672,11 +686,17 @@
             const message = document.getElementById('contactMessage');
             const submitBtn = document.getElementById('contactSubmitBtn');
 
-            const validateName = attachStrictValidation(name, null, FormValidators.name);
-            const validateEmail = attachStrictValidation(email, null, FormValidators.email);
-            const validatePhone = attachStrictValidation(phone, null, FormValidators.phone);
-            const validateSubject = attachStrictValidation(subject, null, (val) => FormValidators.subject(val, 4));
-            const validateMsg = attachStrictValidation(message, null, (val) => FormValidators.message(val, 20));
+            const nameErr = document.getElementById('contactNameError');
+            const emailErr = document.getElementById('contactEmailError');
+            const phoneErr = document.getElementById('contactPhoneError');
+            const subErr = document.getElementById('contactSubjectError');
+            const msgErr = document.getElementById('contactMessageError');
+
+            const validateName = attachStrictValidation(name, nameErr, FormValidators.name);
+            const validateEmail = attachStrictValidation(email, emailErr, FormValidators.email);
+            const validatePhone = attachStrictValidation(phone, phoneErr, FormValidators.phone);
+            const validateSubject = attachStrictValidation(subject, subErr, (val) => FormValidators.subject(val, 4));
+            const validateMsg = attachStrictValidation(message, msgErr, (val) => FormValidators.message(val, 20));
 
             contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -973,27 +993,34 @@
                     const allMet = updatePasswordCriteria(this.value);
                     if (allMet) {
                         clearFieldError(passInput, passError, true);
+                    } else if (passInput.closest('.auth-form-group') && passInput.closest('.auth-form-group').classList.contains('has-error')) {
+                        validatePass();
                     }
                     if (confirmInput && confirmInput.value) {
                         validateConfirm();
                     }
                 });
                 passInput.addEventListener('blur', function () {
-                    if (this.value) validatePass();
+                    validatePass();
                 });
             }
 
             if (confirmInput) {
                 confirmInput.addEventListener('input', function () {
-                    if (this.value) validateConfirm();
+                    if (confirmInput.closest('.auth-form-group') && confirmInput.closest('.auth-form-group').classList.contains('has-error')) {
+                        validateConfirm();
+                    }
                 });
                 confirmInput.addEventListener('blur', function () {
-                    if (this.value) validateConfirm();
+                    validateConfirm();
                 });
             }
 
             if (termsInput) {
                 termsInput.addEventListener('change', function () {
+                    validateTerms();
+                });
+                termsInput.addEventListener('blur', function () {
                     validateTerms();
                 });
             }
@@ -1429,37 +1456,87 @@
             const startErr = document.getElementById('reportStartError');
             const endErr = document.getElementById('reportEndError');
 
-            const validateDates = () => {
-                const res = FormValidators.dateRange(startInput ? startInput.value : '', endInput ? endInput.value : '');
-                if (!res.valid) {
-                    if (res.field === 'start') {
-                        setFieldError(startInput, startErr, res.message);
-                        clearFieldError(endInput, endErr, false);
-                    } else {
-                        setFieldError(endInput, endErr, res.message);
-                        clearFieldError(startInput, startErr, true);
-                    }
+            const validateStartDate = () => {
+                const val = startInput ? startInput.value.trim() : '';
+                if (!val) {
+                    setFieldError(startInput, startErr, 'This field is required');
                     return false;
-                } else {
-                    clearFieldError(startInput, startErr, true);
-                    clearFieldError(endInput, endErr, true);
-                    return true;
                 }
+                const s = new Date(val);
+                if (isNaN(s.getTime())) {
+                    setFieldError(startInput, startErr, 'Invalid start date.');
+                    return false;
+                }
+                clearFieldError(startInput, startErr, true);
+
+                // If end date is also present, validate order
+                const endVal = endInput ? endInput.value.trim() : '';
+                if (endVal) {
+                    const e = new Date(endVal);
+                    if (!isNaN(e.getTime())) {
+                        if (s > e) {
+                            setFieldError(endInput, endErr, 'End date must be on or after start date.');
+                        } else {
+                            clearFieldError(endInput, endErr, true);
+                        }
+                    }
+                }
+                return true;
             };
 
-            [startInput, endInput].forEach(input => {
-                if (input) {
-                    input.addEventListener('change', validateDates);
-                    input.addEventListener('blur', validateDates);
+            const validateEndDate = () => {
+                const val = endInput ? endInput.value.trim() : '';
+                if (!val) {
+                    setFieldError(endInput, endErr, 'This field is required');
+                    return false;
                 }
-            });
+                const e = new Date(val);
+                if (isNaN(e.getTime())) {
+                    setFieldError(endInput, endErr, 'Invalid end date.');
+                    return false;
+                }
+
+                // If start date is also present, validate order
+                const startVal = startInput ? startInput.value.trim() : '';
+                if (startVal) {
+                    const s = new Date(startVal);
+                    if (!isNaN(s.getTime()) && s > e) {
+                        setFieldError(endInput, endErr, 'End date must be on or after start date.');
+                        return false;
+                    }
+                }
+                clearFieldError(endInput, endErr, true);
+                return true;
+            };
+
+            const validateDates = () => {
+                const isStartValid = validateStartDate();
+                const isEndValid = validateEndDate();
+                return isStartValid && isEndValid;
+            };
+
+            if (startInput) {
+                ['input', 'change', 'blur'].forEach(evt => {
+                    startInput.addEventListener(evt, validateStartDate);
+                });
+            }
+
+            if (endInput) {
+                ['input', 'change', 'blur'].forEach(evt => {
+                    endInput.addEventListener(evt, validateEndDate);
+                });
+            }
 
             customReportForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                if (!validateDates()) {
+                const ok = validateDates();
+                if (!ok) {
                     triggerFormShake(customReportForm);
-                    if (startInput && !startInput.value) startInput.focus();
-                    else if (endInput) endInput.focus();
+                    if (startInput && !startInput.value.trim()) {
+                        startInput.focus();
+                    } else if (endInput && !endInput.value.trim()) {
+                        endInput.focus();
+                    }
                     showToast('Please correct the report date range.', 'fa-triangle-exclamation');
                     return;
                 }
@@ -1670,7 +1747,7 @@
                 const text = chatInput.value.trim();
                 if (!text) {
                     triggerFormShake(clientChatForm);
-                    showToast('Please type a message before sending.', 'fa-triangle-exclamation');
+                    showToast('This field is required', 'fa-triangle-exclamation');
                     chatInput.focus();
                     return;
                 }
@@ -1887,18 +1964,24 @@
 
         const page = getCurrentPage();
 
-        if (page === 'index.html' || page === '') {
-            initHome();
-        } else if (page === 'blog.html') {
-            initBlog();
-        } else if (page === 'contact.html') {
-            initContact();
-        } else if (page === 'login.html' || page === 'signup.html') {
+        // Element-aware and route-resilient page initialization
+        if (page.includes('login') || page.includes('signup') || document.getElementById('loginForm') || document.getElementById('signupForm')) {
             initAuth();
-        } else if (page === 'user-dashboard.html' || page === 'client-dashboard.html') {
+        }
+        if (page.includes('contact') || document.getElementById('contactForm')) {
+            initContact();
+        }
+        if (page.includes('blog') || document.getElementById('newsletterForm')) {
+            initBlog();
+        }
+        if (page.includes('dashboard') || document.querySelector('.dashboard-container') || document.getElementById('customReportForm') || document.getElementById('profileDetailsForm') || document.getElementById('clientProfileForm')) {
             initDashboards();
-        } else if (page === '404.html') {
+        }
+        if (page.includes('404') || document.querySelector('.error-page-wrapper')) {
             init404();
+        }
+        if (page === 'index.html' || page === 'index' || page === '' || document.querySelector('.hero-section')) {
+            initHome();
         }
     });
 
