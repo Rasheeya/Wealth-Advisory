@@ -279,6 +279,14 @@
                 return;
             }
 
+            // Document Dropzone routes directly to 404.html
+            if (e.target.closest('.file-dropzone') || e.target.closest('#clientDocDropzone')) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = '404.html';
+                return;
+            }
+
             // 3. Locate closest link or button
             const btn = e.target.closest('button');
             const link = e.target.closest('a');
@@ -1773,11 +1781,13 @@
             });
         }
 
-        // File Dropzone simulation
+        // File Dropzone redirect to 404
         const dropzone = document.getElementById('clientDocDropzone');
         if (dropzone) {
-            dropzone.addEventListener('click', () => {
-                showToast('Secure Document Vault: File uploaded and encrypted with AES-256.', 'fa-cloud-arrow-up');
+            dropzone.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = '404.html';
             });
         }
 
